@@ -1,2 +1,0 @@
-# myblog
-https://pureven.cc
