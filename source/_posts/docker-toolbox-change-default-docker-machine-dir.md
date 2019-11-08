@@ -24,7 +24,7 @@ categories:
 PS C:\Users\39260> docker-machine.exe stop default
 PS C:\Users\39260> docker-machine.exe rm default
 ```
-2.以**管理员**身份运行<code>Docker QuickStart Terminal</code>,并等待所有设置完成，这不很重要！
+2.以**管理员**身份运行<code>Docker QuickStart Terminal</code>,并等待所有设置完成，这步很重要！
 3.等待出现下列显示即可关闭<code>Docker QuickStart Terminal</code>终端，并在没有管理员权限的情况下再次运行。
 ```
 Running pre-create checks...
