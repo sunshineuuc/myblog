@@ -206,7 +206,7 @@ hexo.extend.filter.register('after_post_render', function(data){
   }
 });
 ```
-安装完成后，如果新建文章时就会在<code>/source/_posts</code>目录下创建同名文件夹，好处是将需要插入文章的图片放入同名目录下，在文章中只需使用<code>！【】(image_name.png）</code>即可插入成功
+安装完成后，如果新建文章时就会在<code>/source/_posts</code>目录下创建同名文件夹，好处是将需要插入文章的图片放入同名目录下，在文章中只需使用`![](image_name.png)`即可插入成功
 
 ### 首页文章摘要设置 ###
 编辑<code>themes/next/_config.yml</code>文件，找到<code>excerpt</code>
