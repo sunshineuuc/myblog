@@ -1,5 +1,5 @@
 ---
-title: sed awk grep 入门
+title: grep sed awk 入门
 date: 2019-11-09 7:36:20
 tags:
 - Command
@@ -7,6 +7,337 @@ tags:
 categories:
 - 学习笔记
 ---
+
+
+### grep ###
+
+#### 前言 ####
+
+grep是一个最初用于Unix操作系统的命令行工具。由<code>Kenneth Lane Thompson</code>写成。grep原先是ed下的一个应用程序，名称来自于g/re/p（globally search a regular expression and print，**利用正则表达式在指定文件中进行全局搜索并将搜索到的行打印出来**）。在给出文件列表或标准输入后，grep会对匹配一个或多个正则表达式的文本进行搜索，并只输出匹配（或者不匹配）的行或文本。摘自[维基百科](https://zh.wikipedia.org/wiki/Grep)。可以将grep理解为**字符查找工具**，类似于<code>ctrl + F</code>。
+
+#### 语法形式 ####
+
+````text
+[root@pureven ~]# grep --help
+用法: grep [选项]... PATTERN [FILE]...
+在每个 FILE 或是标准输入中查找 PATTERN。
+默认的 PATTERN 是一个基本正则表达式(缩写为 BRE)。
+例如: grep -i 'hello world' menu.h main.c
+
+正则表达式选择与解释:
+  -E, --extended-regexp     PATTERN 是一个可扩展的正则表达式(缩写为 ERE)
+  -F, --fixed-strings       PATTERN 是一组由断行符分隔的定长字符串。
+  -G, --basic-regexp        PATTERN 是一个基本正则表达式(缩写为 BRE)
+  -P, --perl-regexp         PATTERN 是一个 Perl 正则表达式
+  -e, --regexp=PATTERN      用 PATTERN 来进行匹配操作
+  -f, --file=FILE           从 FILE 中取得 PATTERN
+  -i, --ignore-case         忽略大小写
+  -w, --word-regexp         强制 PATTERN 仅完全匹配字词
+  -x, --line-regexp         强制 PATTERN 仅完全匹配一行
+  -z, --null-data           一个 0 字节的数据行，但不是空行
+
+Miscellaneous:
+  -s, --no-messages         suppress error messages
+  -v, --invert-match        select non-matching lines
+  -V, --version             display version information and exit
+      --help                display this help text and exit
+
+输出控制:
+  -m, --max-count=NUM       NUM 次匹配后停止
+  -b, --byte-offset         输出的同时打印字节偏移
+  -n, --line-number         输出的同时打印行号
+      --line-buffered       每行输出清空
+  -H, --with-filename       为每一匹配项打印文件名
+  -h, --no-filename         输出时不显示文件名前缀
+      --label=LABEL         将LABEL 作为标准输入文件名前缀
+  -o, --only-matching       show only the part of a line matching PATTERN
+  -q, --quiet, --silent     suppress all normal output
+      --binary-files=TYPE   assume that binary files are TYPE;
+                            TYPE is 'binary', 'text', or 'without-match'
+  -a, --text                equivalent to --binary-files=text
+  -I                        equivalent to --binary-files=without-match
+  -d, --directories=ACTION  how to handle directories;
+                            ACTION is 'read', 'recurse', or 'skip'
+  -D, --devices=ACTION      how to handle devices, FIFOs and sockets;
+                            ACTION is 'read' or 'skip'
+  -r, --recursive           like --directories=recurse
+  -R, --dereference-recursive
+                            likewise, but follow all symlinks
+      --include=FILE_PATTERN
+                            search only files that match FILE_PATTERN
+      --exclude=FILE_PATTERN
+                            skip files and directories matching FILE_PATTERN
+      --exclude-from=FILE   skip files matching any file pattern from FILE
+      --exclude-dir=PATTERN directories that match PATTERN will be skipped.
+  -L, --files-without-match print only names of FILEs containing no match
+  -l, --files-with-matches  print only names of FILEs containing matches
+  -c, --count               print only a count of matching lines per FILE
+  -T, --initial-tab         make tabs line up (if needed)
+  -Z, --null                print 0 byte after FILE name
+
+文件控制:
+  -B, --before-context=NUM  打印以文本起始的NUM 行
+  -A, --after-context=NUM   打印以文本结尾的NUM 行
+  -C, --context=NUM         打印输出文本NUM 行
+  -NUM                      same as --context=NUM
+      --group-separator=SEP use SEP as a group separator
+      --no-group-separator  use empty string as a group separator
+      --color[=WHEN],
+      --colour[=WHEN]       use markers to highlight the matching strings;
+                            WHEN is 'always', 'never', or 'auto'
+  -U, --binary              do not strip CR characters at EOL (MSDOS/Windows)
+  -u, --unix-byte-offsets   report offsets as if CRs were not there
+                            (MSDOS/Windows)
+
+‘egrep’即‘grep -E’。‘fgrep’即‘grep -F’。
+直接使用‘egrep’或是‘fgrep’均已不可行了。
+若FILE 为 -，将读取标准输入。不带FILE，读取当前目录，除非命令行中指定了-r 选项。
+如果少于两个FILE 参数，就要默认使用-h 参数。
+如果有任意行被匹配，那退出状态为 0，否则为 1；
+如果有错误产生，且未指定 -q 参数，那退出状态为 2。
+
+请将错误报告给: bug-grep@gnu.org
+GNU Grep 主页: <http://www.gnu.org/software/grep/>
+GNU 软件的通用帮助: <http://www.gnu.org/gethelp/>
+[root@pureven ~]# 
+
+````
+
+----
+
+#### 应用示例 ####
+
+##### 在文件中查找字符串 #####
+
+- 在文件pwd.info中查找“spool”：默认**区分大小写**
+```
+[root@pureven Documents]# cat pwd.info 
+   ROOT:X:0:0:ROOT:/ROOT:/BIN/BASH
+   BIN:X:1:1:BIN:/BIN:/SBIN/NOLOGIN
+   DAEMON:X:2:2:DAEMON:/SBIN:/SBIN/NOLOGIN
+   ADM:X:3:4:ADM:/VAR/ADM:/SBIN/NOLOGIN
+   LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+   sync:x:5:0:sync:/sbin:/bin/sync
+   shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+   halt:x:7:0:halt:/sbin:/sbin/halt
+   mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+   operator:x:11:0:operator:/root:/sbin/nologin
+   [root@pureven Documents]# grep "spool" pwd.info 
+   mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+```
+
+##### 不区分大小写 -i #####
+
+- 在文件pwd.info中查找“spool”及“SPOOL”，使用<code>-i</code>**选项**
+```
+[root@pureven Documents]# cat pwd.info 
+ROOT:X:0:0:ROOT:/ROOT:/BIN/BASH
+BIN:X:1:1:BIN:/BIN:/SBIN/NOLOGIN
+DAEMON:X:2:2:DAEMON:/SBIN:/SBIN/NOLOGIN
+ADM:X:3:4:ADM:/VAR/ADM:/SBIN/NOLOGIN
+LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+[root@pureven Documents]# grep -i "spool" pwd.info 
+LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+```
+
+##### 显示匹配行在文件中的行号 -n #####
+
+- 在文件pwd.info中查找“spool”，显示匹配行在文件中的行号，使用<code>-n</code>**选项** 
+```
+[root@pureven Documents]# cat pwd.info 
+ROOT:X:0:0:ROOT:/ROOT:/BIN/BASH
+BIN:X:1:1:BIN:/BIN:/SBIN/NOLOGIN
+DAEMON:X:2:2:DAEMON:/SBIN:/SBIN/NOLOGIN
+ADM:X:3:4:ADM:/VAR/ADM:/SBIN/NOLOGIN
+LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+[root@pureven Documents]# grep -i -n "spool" pwd.info 
+5:LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+9:mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+```
+
+##### 获取匹配行数 -c #####
+
+- 在文件pwd.info中查找“spool”，显示匹配行的总数，使用<code>-c</code>**选项**
+````
+[root@pureven Documents]# grep -i "spool" pwd.info 
+LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+[root@pureven Documents]# grep -i -c  "spool" pwd.info 
+2
+````
+**注意：**<code>-c</code>选项只会打印总行数，不会打印行内容
+
+##### 显示匹配信息上下文 -A{num}/-B{num}/-C{num} #####
+
+- 当需要了解匹配信息上下文时，需要用到文件控制部分的<code>-A</code>、<code>-B</code>、<code>-C</code>选项:
+>  -B, --before-context=NUM  打印以文本起始的NUM 行
+   -A, --after-context=NUM   打印以文本结尾的NUM 行
+   -C, --context=NUM         打印输出文本NUM 行
+   换言之
+   <code>-B2</code>将会输出匹配行以及匹配行下面的2行
+   <code>-A2</code>将会输出匹配行以及匹配行上面的2行
+   <code>-C2</code>将会输出匹配行以及匹配行上下文各2行
+```
+[root@pureven Documents]# grep -n "SPOOL" pwd.info 
+5:LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+[root@pureven Documents]# grep -n -A2 "SPOOL" pwd.info 
+5:LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+6-sync:x:5:0:sync:/sbin:/bin/sync
+7-shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+[root@pureven Documents]# grep -n -B2 "SPOOL" pwd.info 
+3-DAEMON:X:2:2:DAEMON:/SBIN:/SBIN/NOLOGIN
+4-ADM:X:3:4:ADM:/VAR/ADM:/SBIN/NOLOGIN
+5:LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+[root@pureven Documents]# grep -n -C2 "SPOOL" pwd.info 
+3-DAEMON:X:2:2:DAEMON:/SBIN:/SBIN/NOLOGIN
+4-ADM:X:3:4:ADM:/VAR/ADM:/SBIN/NOLOGIN
+5:LP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+6-sync:x:5:0:sync:/sbin:/bin/sync
+7-shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+[root@pureven Documents]#
+```
+
+##### words 匹配 -w #####
+
+- 在文件pwd.info中查找单词“spool”，即<code>spool</code>作为独立的单词存在，使用<code>-w</code>**选项**
+```text
+[root@pureven Documents]# cat pwd.info 
+hello ROOT:X:0:0:ROOT:/ROOT:/BIN/BASH
+world BIN:X:1:1:BIN:/BIN:/SBIN/NOLOGIN
+helloDAEMON:X:2:2:DAEMON:/SBIN:/SBIN/NOLOGIN
+worldADM:X:3:4:ADM:/VAR/ADM:/SBIN/NOLOGIN
+helloLP:X:4:7:LP:/VAR/SPOOL/LPD:/SBIN/NOLOGIN
+grep sync:x:5:0:sync:/sbin:/bin/sync
+grepshutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+hello halt:x:7:0:halt:/sbin:/sbin/halt
+grep mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+world operator:x:11:0:operator:/root:/sbin/nologin
+[root@pureven Documents]# 
+[root@pureven Documents]# grep "grep" pwd.info 
+grep sync:x:5:0:sync:/sbin:/bin/sync
+grepshutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+grep mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+[root@pureven Documents]# 
+[root@pureven Documents]# grep -w "grep" pwd.info 
+grep sync:x:5:0:sync:/sbin:/bin/sync
+grep mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+[root@pureven Documents]#
+```
+
+##### 反向查找 -v #####
+
+- 在文件pwd.info中查找不包含“spool”的行，使用<code>-v</code>**选项**
+```
+[root@pureven Documents]# cat pwd.info 
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+[root@pureven Documents]# grep -n "sbin" pwd.info 
+2:bin:x:1:1:bin:/bin:/sbin/nologin
+3:daemon:x:2:2:daemon:/sbin:/sbin/nologin
+4:adm:x:3:4:adm:/var/adm:/sbin/nologin
+5:lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+6:sync:x:5:0:sync:/sbin:/bin/sync
+7:shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+8:halt:x:7:0:halt:/sbin:/sbin/halt
+9:mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+10:operator:x:11:0:operator:/root:/sbin/nologin
+[root@pureven Documents]# grep -v -n "sbin" pwd.info 
+1:root:x:0:0:root:/root:/bin/bash
+```
+
+##### 同时匹配多个字符串 -e #####
+
+- 在文件中同时匹配多个字符串，只要有一个字符串匹配就说明此行匹配成功，使用<code>-e</code>**选项**
+```text
+[root@pureven Documents]# cat char.list 
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# grep "a" char.list 
+a b c d e f g
+[root@pureven Documents]# grep "i" char.list 
+h i j k l m n
+[root@pureven Documents]# grep -e "a" -e "i" char.list 
+a b c d e f g
+h i j k l m n
+```
+
+##### 静默模式 -q #####
+
+- 如果不关心在文件中匹配的行信息以及上下文，只关心是否匹配成功，则需要使用<code>-q</code>**选项**
+使用-q在文件中进行匹配有三个结果：
+> 0：匹配成功
+1：匹配失败
+2：匹配文件不存在
+```
+[root@pureven Documents]# cat char.list 
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# grep -q "a" char.list 
+[root@pureven Documents]# echo $?
+0
+[root@pureven Documents]# grep -q "+" char.list 
+[root@pureven Documents]# echo $?
+1
+[root@pureven Documents]# grep -q "a" char.lists
+grep: char.lists: 没有那个文件或目录
+[root@pureven Documents]# echo $?
+2
+[root@pureven Documents]#
+```
+
+##### 正则表达式 -E/egrep #####
+
+- <code>grep</code>支持使用扩展的正则表达式模式来匹配字符串，需要使用**-E**选项或直接使用<code>egrep</code>
+```
+[root@pureven Documents]# cat char.list 
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# grep "a" char.list 
+a b c d e f g
+[root@pureven Documents]# grep "i" char.list 
+h i j k l m n
+[root@pureven Documents]# grep -e "a" -e "i" char.list 
+a b c d e f g
+h i j k l m n
+[root@pureven Documents]# grep -E 'a|i' char.list 
+a b c d e f g
+h i j k l m n
+[root@pureven Documents]#
+```
+其中<code>'a|i'</code>表示<code>a或i</code>
+
+#### 参考链接 ####
+
+本文归纳的不全，如果不满足自己的需求可参考下列链接:
+[https://linux.cn/article-6941-1.html](https://linux.cn/article-6941-1.html)
+[https://www.zsythink.net/archives/1733](https://www.zsythink.net/archives/1733)
+
+----
 
 ### sed ###
 
@@ -18,11 +349,56 @@ sed基于交互式编辑器ed（“editor”，1971）和早期qed（“quick ed
 
 ----
 
-#### 语法 ####
+#### 语法形式 ####
 
-命令格式
->`sed [options] 'command' file(s)
->sed [options] -f scriptfile file(s)
+```text
+[root@pureven Documents]# sed --help
+用法: sed [选项]... {脚本(如果没有其他脚本)} [输入文件]...
+
+  -n, --quiet, --silent
+                 取消自动打印模式空间
+  -e 脚本, --expression=脚本
+                 添加“脚本”到程序的运行列表
+  -f 脚本文件, --file=脚本文件
+                 添加“脚本文件”到程序的运行列表
+  --follow-symlinks
+                 直接修改文件时跟随软链接
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -c, --copy
+                 use copy instead of rename when shuffling files in -i mode
+  -b, --binary
+                 does nothing; for compatibility with WIN32/CYGWIN/MSDOS/EMX (
+                 open files in binary mode (CR+LFs are not treated specially))
+  -l N, --line-length=N
+                 指定“l”命令的换行期望长度
+  --posix
+                 关闭所有 GNU 扩展
+  -r, --regexp-extended
+                 在脚本中使用扩展正则表达式
+  -s, --separate
+                 将输入文件视为各个独立的文件而不是一个长的连续输入
+  -u, --unbuffered
+                 从输入文件读取最少的数据，更频繁的刷新输出
+  -z, --null-data
+                 separate lines by NUL characters
+  --help
+                 display this help and exit
+  --version
+                 output version information and exit
+
+如果没有 -e, --expression, -f 或 --file 选项，那么第一个非选项参数被视为
+sed脚本。其他非选项参数被视为输入文件，如果没有输入文件，那么程序将从标准
+输入读取数据。
+GNU sed home page: <http://www.gnu.org/software/sed/>.
+General help using GNU software: <http://www.gnu.org/gethelp/>.
+E-mail bug reports to: <bug-sed@gnu.org>.
+Be sure to include the word ``sed'' somewhere in the ``Subject:'' field.
+```
+
+#### 脚本动作 ####
+
+##### 单词替换 #####
 
 - <code>sed</code>的简单使用，**单词替换**功能：将<code>hello</code>替换为<code>world</code>，<code>/hello/</code>表示匹配，<code>/world/</code>表示把匹配替换成<code>world</code>
 ```
@@ -53,34 +429,251 @@ world world
 world pureven
 ```
 
+##### 替换 s #####
+
 - 每行替换所有的匹配如何实现
 ```
-docker@pureven:~$ cat input.txt 
-hello world hello world hello hello
-hello pureven hello pureven hello hello
-docker@pureven:~$                                                                                                         
-docker@pureven:~$ sed 's/hello/world/' input.txt > output.txt        
-docker@pureven:~$ cat output.txt                                                                                          
-world world hello world hello hello
-world pureven hello pureven hello hello
-docker@pureven:~$ sed 's/hello/world/g' input.txt > output.txt                                                            
-docker@pureven:~$ cat output.txt                                                                                          
-world world world world world world
-world pureven world pureven world world
+[root@pureven Documents]# clear
+[root@pureven Documents]# cat char.list
+a b c d a f g
+a b c d a f g
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed 's/a/*/' char.list
+* b c d a f g
+* b c d a f g
+* b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed 's/a/*/2' char.list
+a b c d * f g
+a b c d * f g
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed 's/a/*/g' char.list
+* b c d * f g
+* b c d * f g
+* b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]#
 ```
-通过比较可以得出<code>/g</code>的作用是将每行所有的<code>hello</code>替换为<code>world</code>。
+通过比较可以得出<code>/g</code>的作用是将每行所有的<code>a</code>替换为<code>*</code>。
 
-----
+##### 增加/删除/插入 a/d/i #####
 
-#### 脚本 ####
+- a表示新增，后面接字符串，这些字符串会在指定行的下一行出现
 
+比如在第二行后增加"hello wrold"，在所有行后增加"hello world"：
+```text
+[root@pureven Documents]# cat char.list
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed '2a hello world' char.list
+a b c d e f g
+h i j k l m n
+hello world
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed 'a hello world' char.list
+a b c d e f g
+hello world
+h i j k l m n
+hello world
+o p q r s t
+hello world
+u v w x y z
+hello world
+[root@pureven Documents]#
+```
 
+- d表示删除，删除指定行
 
-----
+比如删除第二行，删除第二至第四行：
+```text
+[root@pureven Documents]# cat char.list
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed '2d' char.list
+a b c d e f g
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed '2,4d' char.list
+a b c d e f g
+[root@pureven Documents]#
+```
 
-#### 命令行选项 ####
+- i表示插入，后面接字符串，这些字符串会在指定行的上一行出现
 
+比如在第二行后插入"hello wrold"，在所有行后插入"hello world"：
+```text
+[root@pureven Documents]# cat char.list
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed '2i hello pureven' char.list
+a b c d e f g
+hello pureven
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed 'i hello pureven' char.list
+hello pureven
+a b c d e f g
+hello pureven
+h i j k l m n
+hello pureven
+o p q r s t
+hello pureven
+u v w x y z
+[root@pureven Documents]# 
+```
 
+##### 行替换 c #####
+
+- c ：取代， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行！
+```text
+[root@pureven Documents]# cat char.list
+a b c d e f g
+a b c d e f g
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed '1,4c cc cc cc' char.list
+cc cc cc
+o p q r s t
+u v w x y z
+[root@pureven Documents]#
+```
+
+##### 搜索 p #####
+
+- p ：打印，亦即将某个选择的数据印出。通常 p 会与参数 sed -n 一起运行～
+```text
+[root@pureven Documents]# cat char.list
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed '/o/p' char.list
+a b c d e f g
+h i j k l m n
+o p q r s t
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed -n '/o/p' char.list
+o p q r s t
+[root@pureven Documents]#
+```
+
+#### 选项参数 ####
+
+##### 使用文件中的命令进行替换 -f #####
+
+- -f ：添加文件中的命令
+```text
+[root@pureven Documents]# cat char.list
+a b c d a f g
+a b c d a f g
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# cat char.sed 
+s/a/*/g
+s/$/…………/
+[root@pureven Documents]# sed -f char.sed char.list
+* b c d * f g…………
+* b c d * f g…………
+* b c d e f g…………
+h i j k l m n…………
+o p q r s t…………
+u v w x y z…………
+[root@pureven Documents]#
+```
+
+##### 取消自动打印模式 -n #####
+
+- -n ：sed默认会打印经过处理后的所有文本信息， <code>-n</code>则取消这种自动打印的信息，一般和p搭配使用
+```
+[root@pureven Documents]# cat char.list
+a b c d a f g
+a b c d a f g
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed '2,3a hello pureven' char.list
+a b c d a f g
+a b c d a f g
+hello pureven
+a b c d e f g
+hello pureven
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed -n '2,3a hello pureven' char.list
+hello pureven
+hello pureven
+[root@pureven Documents]# sed -n '/x/p' char.list
+u v w x y z
+[root@pureven Documents]# 
+```
+
+##### 直接修改文件内容 -i #####
+
+- -i ：直接修改文件内容
+```text
+[root@pureven Documents]# cat char.list
+a b c d e f g
+a b c d e f g
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed -i '2,3s/a/*/' char.list
+[root@pureven Documents]# cat char.list
+a b c d e f g
+* b c d e f g
+* b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]#
+```
+
+##### 多个匹配 -e #####
+
+- -e : 指定匹配规则，可添加多个
+```text
+[root@pureven Documents]# cat char.list
+a b c d a f g
+a b c d a f g
+a b c d e f g
+h i j k l m n
+o p q r s t
+u v w x y z
+[root@pureven Documents]# sed -e '2,3s/a/*/' -e 's/$/********/' char.list
+a b c d a f g********
+* b c d a f g********
+* b c d e f g********
+h i j k l m n********
+o p q r s t********
+u v w x y z********
+[root@pureven Documents]#
+```
 ----
 
 
@@ -420,52 +1013,7 @@ u v w z y z
 docker@pureven:~$
 ```
 
-----
-
-### grep ###
-
-#### 前言 ####
-
-grep是一个最初用于Unix操作系统的命令行工具。由<code>Kenneth Lane Thompson</code>写成。grep原先是ed下的一个应用程序，名称来自于g/re/p（globally search a regular expression and print，**全面搜索正则表达式并把行打印出来**）。在给出文件列表或标准输入后，grep会对匹配一个或多个正则表达式的文本进行搜索，并只输出匹配（或者不匹配）的行或文本。摘自[维基百科](https://zh.wikipedia.org/wiki/Grep)。
-
-#### 使用说明 ####
-
-语法形式
-> grep options pattern filename
-grep options "pattern" filename
-
-选项
->-a 将 binary 文件以 text 文件的方式搜寻数据。
--A<显示列数> 除了显示'搜寻字符串'的那一行之外，并显示该行之后的内容。
--b 在显示'搜寻字符串'的那一行之外，并显示该行之前的内容。
--c 计算找到 '搜寻字符串' 的次数。
--C<显示列数>或-<显示列数>  除了显示'搜寻字符串'的那一列之外，并显示该列之前后的内容。
--d<进行动作> 当指定要查找的是目录而非文件时，必须使用这项参数，否则grep命令将回报信息并停止动作。
--e<'搜寻字符串'> 指定字符串作为查找文件内容的'搜寻字符串'。
--E 将'搜寻字符串'为延伸的普通表示法来使用，意味着使用能使用扩展正则表达式。
--f<搜索文件> 指定搜索文件，其内容有一个或多个'搜寻字符串'，让grep查找符合范本条件的文件内容，格式为每一列的'搜寻字符串'。
--F 将'搜寻字符串'视为固定字符串的列表。
--G 将'搜寻字符串'视为普通的表示法来使用。
--h 在显示'搜寻字符串'的那一列之前，不标示该列所属的文件名称。
--H 在显示'搜寻字符串'的那一列之前，标示该列的文件名称。
--i 忽略字符大小写的差别。
--l 列出文件内容符合指定的'搜寻字符串'的文件名称。
--L 列出文件内容不符合指定的'搜寻字符串'的文件名称。
--n 输出该列的行号。
--q 不显示任何信息。
--R/-r 此参数的效果和指定“-d recurse”参数相同。
--s 不显示错误信息。
--v 反转查找。
--w 只显示全字符合的列。
--x 只显示全列符合的列。
--y 此参数效果跟“-i”相同。
--o 只输出文件中匹配到的部分。
-
-**应用示例**
-
-
-
-### 参考链接 ###
+#### 参考链接 ####
 [awk 入门教程](http://www.ruanyifeng.com/blog/2018/11/awk.html)
 [sed 简明教程](https://coolshell.cn/articles/9104.html)
 
