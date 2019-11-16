@@ -31,7 +31,7 @@ custom_file_path:
   #bodyEnd: source/_data/body-end.swig
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -136,7 +136,7 @@ menu:
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 
 # ---------------------------------------------------------------
@@ -878,7 +878,7 @@ pace:
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
 three:
-  enable: true
+  enable: false
   three_waves: true
   canvas_lines: false
   canvas_sphere: false

@@ -208,6 +208,30 @@ hexo.extend.filter.register('after_post_render', function(data){
 ```
 安装完成后，如果新建文章时就会在<code>/source/_posts</code>目录下创建同名文件夹，好处是将需要插入文章的图片放入同名目录下，在文章中只需使用`![](image_name.png)`即可插入成功
 
+### 添加背景图片 ###
+1. 编辑themes/next/_config.yml文件，找到<code>custom_file_path</code>，取消<code>style: source/_data/styles.styl</code>注释
+2. 站点根目录下新建文件<code>source/_data/style.styl</code>，内容如下:
+```text
+body {
+      background: url(https://source.unsplash.com/random/1600x900?wallpapers);//自己喜欢的图片地址
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+}
+
+// 修改主体透明度
+.main-inner {
+      background: #fff;
+      opacity: 0.8;
+}
+
+// 修改菜单栏透明度
+.header-inner {
+      opacity: 0.8;
+}
+```
+
 ### 首页文章摘要设置 ###
 编辑<code>themes/next/_config.yml</code>文件，找到<code>excerpt</code>
 ```
