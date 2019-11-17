@@ -59,6 +59,8 @@ Status: Downloaded newer image for nginx:latest
 docker.io/library/nginx:latest
 ```
 
+----
+
 #### 创建一个简单的nginx容器 ####
 
 使用命令<code>docker container run</code>命令进行创建：
@@ -74,6 +76,8 @@ a15a9bf298594e0e466257117099cf8b35c5f05197d644fb80725fa7557c8639
 然后通过浏览器http://192.168.99.100:8080/访问nginx服务器，如图：
 ![](docker-nginx-phpfpm/20191117171409.png)
 这种方案进行部署的nginx容器是将供浏览的资源文件放入容器内部的，外部对资源的创建修改很不方便，因此可以通过目录映射的方式将外部资源目录映射到容器内作为nginx的资源目录。
+
+----
 
 #### 将资源目录放在外部 ####
 
@@ -100,6 +104,8 @@ ba452c50279e91ae20aaca2bd685ec96681c5354d5dc2f6ce6a2e2c6a17e6151
 3. 然后通过浏览器http://192.168.99.100:8080/访问nginx服务器，如图：
    ![](docker-nginx-phpfpm/20191117171855.png)
    这种方案进行部署的nginx容器只能当做静态资源服务器，如果动态交互则需要进一步升级，下面拿动态web脚本PHP语言为例创建一个nginx + php-fpm的web环境
+
+----
 
 #### nginx + php-fpm 环境 ####
 

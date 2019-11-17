@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/themes/next/node_modules/" />
@@ -16,24 +17,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="76">
-                <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+              <first_editor relative-caret-position="331">
+                <caret line="241" column="46" selection-start-line="241" selection-start-column="46" selection-end-line="241" selection-end-column="46" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_header.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -116,15 +108,15 @@
         <option value="$PROJECT_DIR$/.deploy_git/css/main.css" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_variables/base.styl" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_menu.styl" />
-        <option value="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_header.styl" />
+        <option value="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="17" />
-    <option name="y" value="36" />
-    <option name="width" value="1943" />
+    <option name="x" value="16" />
+    <option name="y" value="35" />
+    <option name="width" value="1944" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -133,7 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,52 +135,19 @@
             <path>
               <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
               <item name="pureven" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pureven" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="next" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pureven" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="next" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
               <item name="pureven" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="next" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pureven" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="next" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="_schemes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pureven" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="next" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="_schemes" type="462c0819:PsiDirectoryNode" />
-              <item name="Pisces" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,7 +195,8 @@
       <workItem from="1573646613670" duration="4954000" />
       <workItem from="1573734003175" duration="2188000" />
       <workItem from="1573821754885" duration="12867000" />
-      <workItem from="1573971556619" duration="10462000" />
+      <workItem from="1573971556619" duration="10623000" />
+      <workItem from="1573991963228" duration="267000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -257,7 +216,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129710000" />
+    <option name="totallyTimeSpent" value="130138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1478" height="878" extended-state="6" />
@@ -604,13 +563,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="140">
-            <caret line="229" column="41" selection-start-line="229" selection-start-column="41" selection-end-line="229" selection-end-column="41" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_header.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -624,10 +580,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_header.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+    <entry file="file://$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="331">
+            <caret line="241" column="46" selection-start-line="241" selection-start-column="46" selection-end-line="241" selection-end-column="46" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
