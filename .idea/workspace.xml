@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/sidebar-blogroll.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/sidebar-blogroll.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_layout.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_layout.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_variables/base.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_variables/base.styl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/themes/next/node_modules/" />
@@ -18,14 +21,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_sidebar.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/header/menu.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_layout.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/sidebar-blogroll.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/site-state.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/sidebar-author.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_variables/base.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="331">
-                <caret line="241" column="46" selection-start-line="241" selection-start-column="46" selection-end-line="241" selection-end-column="46" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_menu.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -41,24 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>images</find>
-      <find>asset</find>
-      <find>assets</find>
-      <find>url</find>
-      <find>/.cc/</find>
-      <find>beginpos</find>
-      <find>底部</find>
-      <find>update</find>
-      <find>folder</find>
-      <find>链接</find>
-      <find>符合范本样式</find>
-      <find>范本样式</find>
-      <find>background-size</find>
-      <find>tree</find>
-      <find>three</find>
-      <find>custom_file_path</find>
-      <find>png</find>
-      <find>categories</find>
       <find>pureven</find>
       <find>title</find>
       <find>padding: 20px 0;</find>
@@ -71,6 +125,24 @@
       <find>site-meta {</find>
       <find>site-m</find>
       <find>pisc</find>
+      <find>.site-description</find>
+      <find>site-state-item-name</find>
+      <find>header-inner</find>
+      <find>links-of-blogroll-title {</find>
+      <find>site-state {</find>
+      <find>.site-state-item-name {</find>
+      <find>site-state-item-count {</find>
+      <find>site-state-item-count</find>
+      <find>links-of-blogroll-item {</find>
+      <find>.badge</find>
+      <find>.menu .menu-item .badge</find>
+      <find>.menu .menu-item .badge {</find>
+      <find>site-state-wrap</find>
+      <find>.badge {</find>
+      <find>menu-item-active a {</find>
+      <find>@extend .menu-item-active a</find>
+      <find>.menu-item-active a</find>
+      <find>menu-item-active</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -90,7 +162,6 @@
         <option value="$PROJECT_DIR$/themes/next/layout/_layout.swig" />
         <option value="$PROJECT_DIR$/themes/next/source/lib/three/lib/CanvasRenderer.js" />
         <option value="$PROJECT_DIR$/themes/next/source/js/src/click.js" />
-        <option value="$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl" />
         <option value="$PROJECT_DIR$/source/.gitattributes" />
         <option value="$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md" />
         <option value="$PROJECT_DIR$/node_modules/hexo-asset-image/index.js" />
@@ -105,18 +176,24 @@
         <option value="$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md" />
         <option value="$PROJECT_DIR$/source/_data/styles.styl" />
         <option value="$PROJECT_DIR$/themes/next/_config.yml" />
-        <option value="$PROJECT_DIR$/.deploy_git/css/main.css" />
-        <option value="$PROJECT_DIR$/themes/next/source/css/_variables/base.styl" />
-        <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_menu.styl" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_header.styl" />
         <option value="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_layout.styl" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/sidebar-blogroll.styl" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/site-state.styl" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_common/outline/header/menu.styl" />
+        <option value="$PROJECT_DIR$/.deploy_git/css/main.css" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_variables/base.styl" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_sidebar.styl" />
+        <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_menu.styl" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="16" />
+    <option name="x" value="15" />
     <option name="y" value="35" />
-    <option name="width" value="1944" />
+    <option name="width" value="1945" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -125,6 +202,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,11 +221,55 @@
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pureven" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pureven" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pureven" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pureven" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pureven" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="_schemes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pureven" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="_schemes" type="462c0819:PsiDirectoryNode" />
+              <item name="Pisces" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,7 +318,9 @@
       <workItem from="1573734003175" duration="2188000" />
       <workItem from="1573821754885" duration="12867000" />
       <workItem from="1573971556619" duration="10623000" />
-      <workItem from="1573991963228" duration="267000" />
+      <workItem from="1573991963228" duration="1660000" />
+      <workItem from="1574166225165" duration="4865000" />
+      <workItem from="1574253047696" duration="3451000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -216,7 +340,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130138000" />
+    <option name="totallyTimeSpent" value="139847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1478" height="878" extended-state="6" />
@@ -233,9 +357,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32780084" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32686982" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.13296399" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.59418285" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32963988" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -363,13 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/CNAME">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -443,16 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/docker-container-run.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="15" selection-start-line="15" selection-end-line="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/windows-nginx-svr.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -490,13 +597,6 @@
     <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Gemini/index.styl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_sidebar.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Mist/_menu.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -508,34 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_variables/base.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="181" lean-forward="true" selection-start-line="181" selection-end-line="181" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_menu.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.deploy_git/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="2361" column="1" selection-start-line="2361" selection-start-column="1" selection-end-line="2361" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_data/styles.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -583,10 +655,97 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="331">
-            <caret line="241" column="46" selection-start-line="241" selection-start-column="46" selection-end-line="241" selection-end-column="46" />
+          <first_editor relative-caret-position="1718">
+            <caret line="233" column="14" lean-forward="true" selection-start-line="233" selection-start-column="14" selection-end-line="233" selection-end-column="14" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/docker-container-run.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="361">
+            <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.deploy_git/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="2431" column="15" lean-forward="true" selection-start-line="2431" selection-start-column="15" selection-end-line="2431" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_data/styles.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/sidebar-blogroll.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/sidebar-author.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/sidebar/site-state.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_variables/base.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_common/outline/header/menu.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_sidebar.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_layout.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_menu.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
         </state>
       </provider>
     </entry>
