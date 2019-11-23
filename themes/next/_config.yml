@@ -209,8 +209,8 @@ links_settings:
 
 links:
   #Title: http://example.com
-  百度: http://baidu.com/
-  开源中国: https://www.oschina.net/
+  Web 开发技术 | MDN: https://developer.mozilla.org/zh-CN/docs/Web
+  开发者手册 - 云+社区 - 腾讯云: https://cloud.tencent.com/developer/devdocs
 
 # Table of Contents in the Sidebar
 toc:
