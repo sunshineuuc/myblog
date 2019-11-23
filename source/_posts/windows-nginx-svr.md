@@ -35,6 +35,8 @@ D:\nginx
 ```
 - 运行NGINX，直接双击nginx.exe即可
 
+<!-- more -->
+
 ### 问题 ###
 
 通过双击运行nginx后，有几点不便：

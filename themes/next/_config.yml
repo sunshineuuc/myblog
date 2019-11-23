@@ -31,7 +31,7 @@ custom_file_path:
   #bodyEnd: source/_data/body-end.swig
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  style: source/_data/styles.styl
+  #style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -313,7 +313,7 @@ post_edit:
 # ---------------------------------------------------------------
 
 # Enable "cheers" for archive page.
-cheers: true
+cheers: false
 
 # TagCloud settings for tags page.
 tagcloud:
@@ -370,7 +370,7 @@ codeblock:
     # Show text copy result.
     show_result: true
     # Available values: default | flat | mac
-    style:
+    style: default
 
 back2top:
   enable: true

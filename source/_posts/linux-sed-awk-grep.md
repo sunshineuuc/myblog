@@ -15,6 +15,8 @@ categories:
 
 grep是一个最初用于Unix操作系统的命令行工具。由<code>Kenneth Lane Thompson</code>写成。grep原先是ed下的一个应用程序，名称来自于g/re/p（globally search a regular expression and print，**利用正则表达式在指定文件中进行全局搜索并将搜索到的行打印出来**）。在给出文件列表或标准输入后，grep会对匹配一个或多个正则表达式的文本进行搜索，并只输出匹配（或者不匹配）的行或文本。摘自[维基百科](https://zh.wikipedia.org/wiki/Grep)。可以将grep理解为**字符查找工具**，类似于<code>ctrl + F</code>。
 
+<!-- more -->
+
 #### 语法形式 ####
 
 ````text

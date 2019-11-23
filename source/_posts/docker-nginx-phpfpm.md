@@ -13,6 +13,8 @@ categories:
 
 #### 获取nginx镜像 ####
 
+<!-- more -->
+
 1. 查看nginx镜像
 >使用<code>docker search nginx</code>命令查看有哪些nginx镜像
 ```text

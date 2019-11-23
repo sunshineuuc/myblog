@@ -29,6 +29,8 @@ timezone: Asia/Shanghai
 ### 安装Next主题 ###
 站点根目录下执行命令<code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code>进行安装
 
+<!-- more -->
+
 ### 配置Next主题 ###
 编辑<code>themes/next/</code>目录下<code>_config.yml</code>文件，查找<code>scheme</code>,会发现有四种不同的<scheme>
 ```

@@ -12,6 +12,8 @@ categories:
 安装完Docker Toolbox后，默认docker machine的存储位置为<code>C:\Users\39260\.docker\machine\machines</code>，
 随着对虚机的使用会导虚拟硬盘所占空间越来越大，严重了会导致C盘空间空间告警！
 
+<!-- more -->
+
 ### 设置默认docker machine存储目录 ###
 1.选择一块空间充足的磁盘，新建虚机存储目录，这里选择目录为<code>H:\VM\machines</code>，
 并将目录添加到系统环境变量<code>MACHINE_STORAGE_PATH</code>
