@@ -5,7 +5,7 @@ tags:
 - Command
 - Linux
 categories:
-- 学习笔记
+- 操作系统
 ---
 
 

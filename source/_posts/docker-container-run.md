@@ -5,7 +5,7 @@ tags:
 - Command
 - docker
 categories:
-- 学习笔记
+- web学习笔记
 ---
 
 `docker run`跟`docker container run`命令功能是一样的，都是创建一个新的容器并运行一个命令。

@@ -5,7 +5,7 @@ tags:
 - windows
 - nginx
 categories:
-- Windows
+- web学习笔记
 ---
 
 ### NGINX安装 ###

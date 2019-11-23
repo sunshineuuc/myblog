@@ -6,7 +6,7 @@ tags:
 - nginx
 - php
 categories:
-- docker
+- web学习笔记
 ---
 
 ### nginx容器搭建 ###
