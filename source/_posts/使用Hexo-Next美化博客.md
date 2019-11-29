@@ -368,6 +368,78 @@ links:
   开源中国: https://www.oschina.net/
 ```
 
+### 补充功能 ###
+
+#### 部分图片禁用fancybox ####
+
+hexo默认使用fancybox插件，支持点击放大查看。如果不想图片被点击放大，可以使用下面的方法：
+1. 找到`theme/next/source/js/utils.js`文件中`var $image = $(element);`
+2. 在下一行添加代码`if ($(element).hasClass('nofancybox')) return;`
+如下：
+```
+wrapImageWithFancyBox: function() {
+    document.querySelectorAll('.post-body :not(a) > img, .post-body > img').forEach(element => {
+      var $image = $(element);
+      if ($(element).hasClass('nofancybox')) return; // 此后为添加行
+      var imageLink = $image.attr('data-src') || $image.attr('src');
+      …………
+```
+
+#### 设置背景图片 ####
+
+1. 查看当前使用的是哪个next主题，比如这里用的是`Gemini`
+2. 找到`themes/next/source/css/_schemes/Gemini/index.styl`文件，末尾添加如下代码：
+```css
+body {
+    background:url(/images/school.png); /* school.png 为自定义的图片 */
+    background-attachment: fixed;
+}
+```
+
+#### 内容板块透明设置 ####
+
+1. 查看当前使用的是哪个next主题，比如这里用的是`Gemini`
+2. 找到`themes/next/source/css/_schemes/Gemini/index.styl`文件，修改如下代码：
+```css
+.content-wrap {
+  background: rgba(255,255,255,0.5); //0.5是透明度
+  box-shadow: initial;
+  padding: initial;
+}
+
+.post-block {
+  background: rgba(255,255,255,0.1);
+  border-radius: $border-radius-inner;
+  box-shadow: $box-shadow-inner;
+  padding: $content-desktop-padding;
+}
+
++tablet() {
+  // Posts in blocks.
+  .content-wrap {
+    padding: $content-tablet-padding;
+    background: rgba(255,255,255,0.5); //0.5是透明度
+  }
+  ………
+}
+```
+
+#### 灵活设置摘要 ####
+
+只需在文章任何地方加入代码`<!-- more -->`，之后的将被屏蔽调，之前的内容作为摘要出现。
+
+#### 设置行内代码块颜色 ####
+
+找到`/themes/next/source/css/_common/scaffolding/highlight/highlight.styl`文件，定位到`code`定义处，修改为：
+```css
+code {
+  background: #5cb85c; // $code-background;
+  border-radius: $code-border-radius;
+  color: #891717; // $code-foreground;
+  padding: 2px 4px;
+  word-wrap();
+}
+```
 
 ### 参考链接 感谢各位 ###
 [BlueLzy的博客](https://bluelzy.com/articles/use_valine_for_your_blog.html)
