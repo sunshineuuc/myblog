@@ -36,8 +36,15 @@ th, td {
 th {
   font-weight: $table-th-font-weight;
   padding-bottom: 10px;
+  background: rgba(158,188,226,0.2); /*背景色*/
+  white-space: nowrap; /*表头内容强制在一行显示*/
 }
 
 td {
   border-bottom-width: 1px;
+}
+
+td:nth-child(1) { /* 首列不换行 */
+  white-space: nowrap;
+  text-align center;
 }
