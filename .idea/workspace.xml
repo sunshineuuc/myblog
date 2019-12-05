@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/themes/next/node_modules/" />
@@ -21,8 +22,20 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="375">
-                <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <first_editor relative-caret-position="175">
+                <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/dns-setting.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="200">
+                <caret line="173" column="38" selection-start-line="173" selection-start-column="38" selection-end-line="173" selection-end-column="38" />
               </first_editor>
               <second_editor />
             </state>
@@ -119,11 +132,11 @@
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md" />
         <option value="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url-hosts.md" />
         <option value="$PROJECT_DIR$/source/_posts/what-is-binary.md" />
-        <option value="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Gemini/index.styl" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/tables.styl" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/source/_posts/dns-setting.md" />
+        <option value="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" />
       </list>
     </option>
   </component>
@@ -273,11 +286,25 @@
       <option name="project" value="LOCAL" />
       <updated>1575450233014</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="201912041703">
+      <created>1575461769660</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575461769661</updated>
+    </task>
+    <task id="LOCAL-00009" summary="201912051013">
+      <created>1575512032920</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575512032920</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254735000" />
+    <option name="totallyTimeSpent" value="257815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -354,7 +381,8 @@
     <MESSAGE value="数学公式" />
     <MESSAGE value="201912021805" />
     <MESSAGE value="201912041703" />
-    <option name="LAST_COMMIT_MESSAGE" value="201912041703" />
+    <MESSAGE value="201912051013" />
+    <option name="LAST_COMMIT_MESSAGE" value="201912051013" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/themes/landscape/languages/zh-CN.yml">
@@ -708,16 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/dns-setting.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-956">
-            <caret line="267" column="55" selection-start-line="267" selection-start-column="55" selection-end-line="267" selection-end-column="55" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/what-is-binary.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -728,11 +746,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/dns-setting.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="200">
+            <caret line="173" column="38" selection-start-line="173" selection-start-column="38" selection-end-line="173" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="375">
-            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <first_editor relative-caret-position="175">
+            <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
