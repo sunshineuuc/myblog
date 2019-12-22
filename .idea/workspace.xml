@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
+    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="201912092059">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/base.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/base.styl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/themes/next/node_modules/" />
@@ -19,11 +19,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-269">
-                <caret line="195" column="28" selection-start-line="195" selection-start-column="28" selection-end-line="195" selection-end-column="28" />
+              <first_editor relative-caret-position="261">
+                <caret line="179" column="7" selection-start-line="179" selection-start-column="7" selection-end-line="179" selection-end-column="7" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="171">
+                <caret line="26" column="83" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="83" />
               </first_editor>
               <second_editor />
             </state>
@@ -41,7 +53,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.menu-item-active a</find>
       <find>menu-item-active</find>
       <find>wechat_subscriber</find>
       <find>tag_icon</find>
@@ -71,6 +82,7 @@
       <find>post-body</find>
       <find>marked</find>
       <find>hr {</find>
+      <find>#</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,14 +139,17 @@
         <option value="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/base.styl" />
         <option value="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-index.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="457" />
-    <option name="y" value="82" />
-    <option name="width" value="2308" />
-    <option name="height" value="1113" />
+    <option name="x" value="47" />
+    <option name="y" value="57" />
+    <option name="width" value="1792" />
+    <option name="height" value="990" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -159,13 +174,6 @@
               <item name="pureven" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pureven" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pureven" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-              <item name="simple-wireshark-tcp-flags" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,7 +237,14 @@
       <workItem from="1574685919568" duration="2589000" />
       <workItem from="1574824889655" duration="32026000" />
       <workItem from="1575636139477" duration="4181000" />
-      <workItem from="1575683214003" duration="20705000" />
+      <workItem from="1575683214003" duration="22639000" />
+      <workItem from="1576067464325" duration="4607000" />
+      <workItem from="1576152487046" duration="4035000" />
+      <workItem from="1576283286872" duration="27425000" />
+      <workItem from="1576500133354" duration="1455000" />
+      <workItem from="1576671164321" duration="4657000" />
+      <workItem from="1576759373005" duration="3415000" />
+      <workItem from="1576846810005" duration="17915000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -301,17 +316,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575554067350</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="201912092059">
+      <created>1575896359469</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575896359469</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286557000" />
+    <option name="totallyTimeSpent" value="352000000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="366" y="66" width="1846" height="890" extended-state="0" />
+    <frame x="38" y="46" width="1433" height="792" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24445984" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3057377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -325,7 +347,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32628062" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24723756" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.15251572" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32963988" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -384,30 +406,10 @@
     <MESSAGE value="201912021805" />
     <MESSAGE value="201912041703" />
     <MESSAGE value="201912051013" />
-    <option name="LAST_COMMIT_MESSAGE" value="201912051013" />
+    <MESSAGE value="201912092059" />
+    <option name="LAST_COMMIT_MESSAGE" value="201912092059" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/next/layout/_macro/sidebar.swig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/layout/_partials/footer.swig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/layout/_partials/sidebar/site-overview.swig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/CNAME">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -765,8 +767,38 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-269">
-            <caret line="195" column="28" selection-start-line="195" selection-start-column="28" selection-end-line="195" selection-end-column="28" />
+          <first_editor relative-caret-position="57">
+            <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="38">
+            <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="171">
+            <caret line="26" column="83" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="83" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="261">
+            <caret line="179" column="7" selection-start-line="179" selection-start-column="7" selection-end-line="179" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
