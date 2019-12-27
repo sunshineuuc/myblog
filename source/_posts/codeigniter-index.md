@@ -1,5 +1,5 @@
 ---
-title: CodeIgniter入口文件index.php学习笔记
+title: CodeIgniter入口文件index.php
 date: 2019-12-16 21:33:50
 tags:
 - php

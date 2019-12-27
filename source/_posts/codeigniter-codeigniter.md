@@ -1,5 +1,5 @@
 ---
-title: CodeIgniter引导文件codeigniter.php学习笔记
+title: CodeIgniter引导文件CodeIgniter.php
 date: 2019-12-19 20:56:41
 tags:
 - php
@@ -161,7 +161,7 @@ Benchmark主要用于记录各种时间点、记录内存使用等参数，便�
 $EXT =& load_class('Hooks', 'core');
 $EXT->call_hook('pre_system');
 ```
-CI的扩展组件用于在不改变CI核心的基础上改变或者增加系统的核心运行功能。Hook钩子允许在系统运行的各个挂钩点（hook point）添加自定义的功能，如pre_system，pre_controller,post_controller等预定义的挂钩点，具体参考<b>APPPATH . config/hooks.php</b>。
+CI的扩展组件用于在不改变CI核心的基础上改变或者增加系统的核心运行功能。Hook钩子允许在系统运行的各个挂钩点（hook point）添加自定义的功能，如pre_system，pre_controller,post_controller等预定义的挂钩点，具体参考<b>APPPATH . config/hooks.php</b>。这里加载完Hooks后首先调用pre_system钩子。
 
 ##### 配置组件 #####
 ```gherkin
@@ -206,22 +206,219 @@ if (is_php('5.6'))
 ```
 这里功能如下：
 1. 设置默认字符集，可在配置文件中进行相关配置。
-2. 如果php启用`mbstring`扩展，则设置常量`MB_ENABLED`为TRUE，<font color="#891717">注意：此功能自PHP5.6.0起已被弃用</font>；设置默认的内部字符编码使网站成为多语言站点；设置替代字符，当输入字符的编码无效时则替换为null，即不输出。
+2. 如果php启用`mbstring`扩展，则设置常量`MB_ENABLED`为TRUE；设置默认的内部字符编码使网站成为多语言站点，<font color="#891717">注意：此功能自PHP5.6.0起已被弃用</font>；设置替代字符，当输入字符的编码无效时则替换为null，即不输出。
 3. 如果php启用`iconv`扩展，则设置常量`ICONV_ENABLED`为TRUE，<font color="#891717">注意：此功能自PHP5.6.0起已被弃用</font>。
+4. 如果PHP版本 >= 5.6, 使用`internal_encoding`来设置用于mbstring和iconv等多字节模块。默认为空。如果为空， 则使用`default_charset`。对于5.6已废弃的特性可参考[PHP 5.6.x 中已废止的特性](https://www.php.net/manual/zh/migration56.deprecated.php)
 
+##### 加载兼容性函数 #####
+```text
+require_once(BASEPATH.'core/compat/mbstring.php');
+require_once(BASEPATH.'core/compat/hash.php');
+require_once(BASEPATH.'core/compat/password.php');
+require_once(BASEPATH.'core/compat/standard.php');
+```
+CodeIgniter提供了一组兼容性函数，使您可以使用PHP本身可用的函数，但只能在更高版本或取决于特定扩展名的情况下使用。这些函数是自定义实现，它们自己也将具有一些依赖关系，但是如果您的PHP安装程序没有本地提供它们，它们仍然很有用。
+<font color="#891717">注意: 与通用功能很相似，只要满足依赖关系，兼容性功能便始终可用。</font>
 
+##### UTF8类 #####
+```text
+$UNI =& load_class('Utf8', 'core');
+```
+用于对UTF-8字符集处理的相关支持。其他组件如INPUT组件，需要改组件的支持。
+
+##### URI类 #####
+```text
+$URI =& load_class('URI', 'core');
+```
+解析URI（Uniform Rescource Identifier）参数等.这个组件与RTR组件关系紧密。
+
+##### Router类 #####
+```text
+$RTR =& load_class('Router', 'core', isset($routing) ? $routing : NULL);
+```
+路由组件，通过URI组件的参数解析，决定数据流向（路由）。
+
+##### Output类 #####
+```text
+$OUT =& load_class('Output', 'core');
+```
+最终的输出管理组件，掌管着CI的最终输出。加载完Output类之后，调用`cache_override`钩子来判断如果有缓存则输出缓存，没用则继续。
+<font color="#891717">注意</font>: `cache_override`钩子可以调用自己的函数来取代output类中的_display_cache() 函数.这可以使用自己的缓存显示方法
+```text
+if ($EXT->call_hook('cache_override') === FALSE && $OUT->_display_cache($CFG, $URI) === TRUE)
+{
+    exit;
+}
+```
+
+##### Security类 #####
+```text
+$SEC =& load_class('Security', 'core');
+```
+用于安全性处理，比如防止跨站请求伪造等。
+
+##### Input类 #####
+```text
+$IN	=& load_class('Input', 'core');
+```
+用于获取输入以及表单验证。
+
+##### Lang类 #####
+```text
+$LANG =& load_class('Lang', 'core');
+```
+用于设置框架语言。
+
+##### 加载控制器 #####
+```text
+require_once BASEPATH.'core/Controller.php';
+function &get_instance()
+{
+    return CI_Controller::get_instance();
+}
+if (file_exists(APPPATH.'core/'.$CFG->config['subclass_prefix'].'Controller.php'))
+{
+    require_once APPPATH.'core/'.$CFG->config['subclass_prefix'].'Controller.php';
+}
+```
+此处定义的get_instance方法返回一个引用，表明CI控制器拒绝副本，是单例模型。到这部核心组件加载完了，标记一下:
+```text
+$BM->mark('loading_time:_base_classes_end');
+```
 
 ---
 
 #### 路由的设置与判断 ####
+```text
+$e404 = FALSE;
+$class = ucfirst($RTR->class);
+$method = $RTR->method;
+if (empty($class) OR ! file_exists(APPPATH.'controllers/'.$RTR->directory.$class.'.php'))
+{
+    $e404 = TRUE;
+}
+else
+{
+    require_once(APPPATH.'controllers/'.$RTR->directory.$class.'.php');
+    if ( ! class_exists($class, FALSE) OR $method[0] === '_' OR method_exists('CI_Controller', $method))
+    {
+        $e404 = TRUE;
+    }
+    elseif (method_exists($class, '_remap'))
+    {
+        $params = array($method, array_slice($URI->rsegments, 2));
+        $method = '_remap';
+    }
+    elseif ( ! method_exists($class, $method))
+    {
+        $e404 = TRUE;
+    }
+    elseif ( ! is_callable(array($class, $method)))
+    {
+        $reflection = new ReflectionMethod($class, $method);
+        if ( ! $reflection->isPublic() OR $reflection->isConstructor())
+        {
+            $e404 = TRUE;
+        }
+    }
+}
+if ($e404)
+{
+    if ( ! empty($RTR->routes['404_override']))
+    {
+        if (sscanf($RTR->routes['404_override'], '%[^/]/%s', $error_class, $error_method) !== 2)
+        {
+            $error_method = 'index';
+        }
+        $error_class = ucfirst($error_class);
+        if ( ! class_exists($error_class, FALSE))
+        {
+            if (file_exists(APPPATH.'controllers/'.$RTR->directory.$error_class.'.php'))
+            {
+                require_once(APPPATH.'controllers/'.$RTR->directory.$error_class.'.php');
+                $e404 = ! class_exists($error_class, FALSE);
+            }
+            elseif ( ! empty($RTR->directory) && file_exists(APPPATH.'controllers/'.$error_class.'.php'))
+            {
+                require_once(APPPATH.'controllers/'.$error_class.'.php');
+                if (($e404 = ! class_exists($error_class, FALSE)) === FALSE)
+                {
+                    $RTR->directory = '';
+                }
+            }
+        }
+        else
+        {
+            $e404 = FALSE;
+        }
+    }
+    if ( ! $e404)
+    {
+        $class = $error_class;
+        $method = $error_method;
+        $URI->rsegments = array(
+            1 => $class,
+            2 => $method
+        );
+    }
+    else
+    {
+        show_404($RTR->directory.$class.'/'.$method);
+    }
+}
+```
+CI认为下面这几种情况认为是404，如果找不到就调用show_404()函数:
+1. 请求的class为空或class文件不存在:`empty($class) OR ! file_exists(APPPATH.'controllers/'.$RTR->directory.$class.'.php')`   
+2. 请求的class不存在或请求的方法为私有方法或请求的是基类中的方法:`! class_exists($class, FALSE) OR $method[0] === '_' OR method_exists('CI_Controller', $method)`   
+3. 请求的方法不存在:` ! method_exists($class, $method)`
+4. 请求的不是公共方法: `! $reflection->isPublic() OR $reflection->isConstructor()`
+如果请求的条件满足上面4个中的任何一个，则被认为是不合法的请求（或者是无法定位的请求），因此会被CI定向到404页面（值得注意的是，如果设置了404_override，并且404_override的class存在，并不会直接调用show_404并退出，而是会像正常的访问一样，实例化：$CI = new $class();）
+
+获取请求参数:
+```text
+if ($method !== '_remap')
+{
+    $params = array_slice($URI->rsegments, 2);
+}
+```
+路由选择和安全性检查都已完成后，调用pre_controller钩子，在开始执行前进行环境预处理，然后标记运行开始时间点:
+```text
+$EXT->call_hook('pre_controller');
+$BM->mark('controller_execution_time_( '.$class.' / '.$method.' )_start');
+```
 
 ---
 
 #### 解析请求的类，并调用请求的方法 ####
+```text
+$CI = new $class();
+$EXT->call_hook('post_controller_constructor');
+call_user_func_array(array(&$CI, $method), $params);
+```
+实例化控制器类，然后调用`post_controller_constructor`钩子，再然后通过`call_user_func_array ( callable $callback , array $param_arr )`函数调用`$CI`类中的`$method`方法，参数为数组`$params`。
+
+在控制器运行完成之后标记运行结束并调用`post_controller`钩子。
+```text
+$BM->mark('controller_execution_time_( '.$class.' / '.$method.' )_end');
+$EXT->call_hook('post_controller');
+```
 
 ---
 
 #### 输出 ####
+```text
+if ($EXT->call_hook('display_override') === FALSE)
+{
+    $OUT->_display();
+}
+```
+在未定义`display_override`钩子的情况下使用`_display()`函数完成最终输出，$this->load->view()之后，并不会直接输出，而是放在了缓存区。$Out->_display之后，才会设置缓存，并最终输出。
+<font color="#891717">注意</font>: `display_override`钩子的作用是覆盖_display()函数, 用来在系统执行末尾向web浏览器发送最终页面.这允许你用自己的方法来显示.<b>这里需要通过 $this->CI =& get_instance()引用CI超级对象，然后这样的最终数据可以通过调用 $this->CI->output->get_output() 来获得。</b>
+
+在最终渲染页面发送到浏览器后，浏览器接收完最终数据的系统末尾调用`post_system`钩子:
+```text
+$EXT->call_hook('post_system');
+```
 
 ---
 
