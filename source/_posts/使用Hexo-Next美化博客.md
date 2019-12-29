@@ -441,6 +441,13 @@ code {
 }
 ```
 
+#### 代码块主题 ####
+
+编辑<code>themes/next/_config.yml</code>文件，找到<code>codeblock</code>
+```text
+highlight_theme: night
+```
+
 ### 参考链接 感谢各位 ###
 [BlueLzy的博客](https://bluelzy.com/articles/use_valine_for_your_blog.html)
 [Eternal_zttz的博客](http://eternalzttz.com/hexo-next.html)

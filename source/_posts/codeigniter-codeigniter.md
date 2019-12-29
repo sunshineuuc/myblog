@@ -112,6 +112,8 @@ register_shutdown_function('_shutdown_handler');
 2. 设置异常处理：set_exception_handler('_exception_handler')。处理函数原型：`function _exception_handler($exception)`。当用户抛出异常时触发throw new Exception('Exception occurred');
 3. 千万不要被shutdown迷惑：register_shutdown_function('_shutdown_handler')可以这样理解调用条件：当页面被用户强制停止时、当程序代码运行超时时、当php代码执行完成时。
 
+函数信息可参考手册[set_error_handler()](https://www.php.net/manual/zh/function.set-error-handler.php)、[set_exception_handler()](https://www.php.net/manual/zh/function.set-exception-handler.php)、[register_shutdown_function()](https://www.php.net/manual/zh/function.register-shutdown-function)
+
 ##### 检查核心class是否被扩展 #####
 ```gherkin
 if ( ! empty($assign_to_config['subclass_prefix']))
