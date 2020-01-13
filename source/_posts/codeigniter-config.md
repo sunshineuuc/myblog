@@ -159,7 +159,7 @@ public function slash_item($item)
     return rtrim($this->config[$item], '/').'/';
 }
 ```
-该方法值判断主配置文件中项，并在配置项最后加上反斜杠，通常用于base_url和index_page这两个配置项的处理。
+该方法值判断主配置文件中是否有指定的配置项，并在配置项最后加上反斜杠，通常用于base_url和index_page这两个配置项的处理。
 
 ---
 
@@ -207,8 +207,8 @@ public function site_url($uri = '', $protocol = NULL)
     return $base_url.$this->item('index_page').$uri;
 }
 ```
-官网给出的解释是: 根据配置文件返回你的站点 URL 。index.php （获取其他你在配置文件中设置的 index_page 参数） 将会包含在你的 URL 中，另外再加上你传给函数的 URI 参数，以及配置文件中设置的 url_suffix 参数。<font color="#891717">推荐在任何时候都使用这种方法来生成你的 URL ，这样在你的 URL 变动时你的代码将具有可移植性。</font>
-通常通过[URL辅助函数](https://codeigniter.org.cn/user_guide/helpers/url_helper.html)中函数`site_url()`来访问。
+官网给出的解释是: 根据配置文件返回你的站点URL。index.php（获取其他你在配置文件中设置的 **index_page** 参数） 将会包含在你的 URL 中，另外再加上你传给函数的 URI 参数，以及配置文件中设置的 **url_suffix** 参数。<font color="#891717">推荐在任何时候都使用这种方法来生成你的 URL ，这样在你的 URL 变动时你的代码将具有可移植性。</font>
+通常通过[URL辅助函数](https://codeigniter.org.cn/user_guide/helpers/url_helper.html)中函数`site_url()`来访问。例如：`echo site_url('news/local/123');`会返回`http://example.com/index.php/news/local/123`。
 ```text
 function site_url($uri = '', $protocol = NULL)
 {
@@ -216,19 +216,72 @@ function site_url($uri = '', $protocol = NULL)
 }
 ```
 功能实现:
-1. 
+1. 获取base_url，格式化协议类型。
+2. 如果uri为空，在base_url后面加上index_page并返回，否则格式化uri。
+3. 如果没有开启了查询字符串则判断是否有后缀，如果有后缀则uri后面加上此后缀，然后返回base_url + index_page + uri。
+4. 如果开启了字符串查询则在uri前面加上问号构成类似`?0=news&1=local&2=123`的uri，然后返回base_uri + index_page + uri。
 
 ---
 
 #### base_url() ####
+```text
+public function base_url($uri = '', $protocol = NULL)
+{
+    $base_url = $this->slash_item('base_url');
+    if (isset($protocol))
+    {
+        // For protocol-relative links
+        if ($protocol === '')
+        {
+            $base_url = substr($base_url, strpos($base_url, '//'));
+        }
+        else
+        {
+            $base_url = $protocol.substr($base_url, strpos($base_url, '://'));
+        }
+    }
+    return $base_url.$this->_uri_string($uri);
+}
+```
+该方法根据配置文件返回你站点的根URL，和`site_url()`函数相同，只是不会在URL的后面加上**index_page**或**url_suffix**。但也字符串或数组格式的URI段，这是由于调用了`_url_string()`的缘故。官网举例`echo base_url("blog/post/123")`将会返回`http://example.com/blog/post/123`。
+功能实现：
+1. 从配置中获取$base_url，这个$base_url是经过构造方法处理后的。
+2. 如果指定了协议类型则在$base_url中替换为指定的协议。
+3. 给$base_url加上格式化后的$uri。这里参见`_uri_string()`。
 
 ---
 
 #### _uri_string() ####
+```text
+protected function _uri_string($uri)
+{
+    if ($this->item('enable_query_strings') === FALSE)
+    {
+        is_array($uri) && $uri = implode('/', $uri);
+        return ltrim($uri, '/');
+    }
+    elseif (is_array($uri))
+    {
+        return http_build_query($uri);
+    }
+    return $uri;
+}
+```
+该方法的作用是格式化$uri，通常只被`site_url()`和`base_url()`调用，参数为URL字符串，也可以是一个数组，比如：`news/local/123`或`['news', 'local', '123']`。
+1. 如果没用启用查询字符串，即`$config['enable_query_strings'] = FALSE`则返回[分段URI](https://codeigniter.org.cn/user_guide/general/urls.html?highlight=enable_query_strings)，即`news/local/123`格式。
+2. 如果启用了查询字符串，则使用[http_build_query](https://www.php.net/manual/zh/function.http-build-query.php)生成 URL-encode 之后的请求字符串，这里为`0=news&1=local&2=123`格式。
 
 ---
 
 #### system_url() ####
+```text
+public function system_url()
+{
+    $x = explode('/', preg_replace('|/*(.+?)/*$|', '\\1', BASEPATH));
+    return $this->slash_item('base_url').end($x).'/';
+}
+```
+该方法返回system目录的url，不安全，已被废弃。`\\1`参考[preg_replace](https://www.php.net/manual/zh/function.preg-replace.php)。
 
 ---
 
@@ -239,10 +292,9 @@ public function set_item($item, $value)
     $this->config[$item] = $value;
 }
 ```
-该方法用于手动设置配置项，如果配置项已存在则将其覆盖。
+该方法用于动态的设置或修改某个已存在的配置项。比如：`$this->config->set_item('item_name', 'item_value');`。
 
 ---
 
 #### 参考链接 ####
 [CI框架源码解析六之配置类文件Config.php](https://blog.csdn.net/Zhihua_W/article/details/52859824)
----
