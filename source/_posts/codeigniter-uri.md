@@ -23,8 +23,8 @@ public $rsegments = array();
 protected $_permitted_uri_chars;
 ```
 - `$keyval`表示
-- `$uri_string`表示
-- `$segments`表示
+- `$uri_string`用于存放uri。
+- `$segments`用于将uri解析后以数组形式存放。
 - `$rsegments`表示
 - `$_permitted_uri_chars`表示URI中接受的字符，在config.php中定义:`$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';`，为空表示允许所有字符！
 
@@ -71,7 +71,8 @@ public function __construct()
 该方法注要是作用在运行在cli模式或未启用字符串查询的条件下。
 1. 从配置文件中获取url允许的字符，即`$config['permitted_uri_chars']`，该属性在`filter_uri()`方法中用来过滤uri。
 2. 如果是cli模式下则使用`_parse_argv()`方法解析命令行参数并整合为uri字符串。
-3. 
+3. 如果uri_protocol是`AUTO`、`REQUEST_URI`使用`_parse_query_string()`方法解析uri，如果是`QUERY_STRING`使用`_parse_query_string()`方法解析uri，`PATH_INFO`以及其他配置则先判断`$_SERVER`的值是否设置，若设置了则用该值作为uri否则跟`AUTO`处理一致。
+4. 调用`_set_uri_string()`方法
 
 ##### 关于uri_protocol #####
 `$config['uri_protocol']`配置不但决定以哪个函数处理URI，同时决定了从哪个全局变量里获取当前上下文的uri地址。uri_protocol可选项有 `AUTO`、`PATH_INFO`、`QUERY_STRING`、`REQUEST_URI`、`ORIG_PATH_INFO`，对应关系是：
@@ -123,6 +124,9 @@ protected function _set_uri_string($str)
     }
 }
 ```
+该方法给功能是将$uri赋值给`$uri_string`变量并解析填充到`segments`数组中去，功能实现:
+1. 若设置了后缀则移除uri后缀。
+2. 解析uri，用'/'分段，填充到$this->segments数组中去。
 
 ---
 
@@ -195,6 +199,10 @@ protected function _parse_query_string()
     return $this->_remove_relative_directory($uri);
 }
 ```
+该方法用来解析类似`http://www.nc.com/index.php?/news/list/fruit?page=2`这样的地址，解析过程如下:
+1. 从`$_SERVER['QUERY_STRING']`中取值`/news/list/fruit?page=2`。
+2. $uri赋值`/news/list/fruit`，`page=2`赋值`$_GET`。
+3. 去除$uri中的`../`相对路径字符和反斜杠`////`。
 
 ---
 
@@ -228,6 +236,10 @@ protected function _remove_relative_directory($uri)
     return implode('/', $uris);
 }
 ```
+该方法主要作用是移除$uri中的`../`相对路径字符和反斜杠`////`。功能实现:
+1. 首先使用[strtok](https://www.php.net/manual/zh/function.strtok)标记$uri中的反斜杠`/`。
+2. 然后对每个字符串进行判断，过滤`..`和`//`。
+3. 将过滤后留下的字符串进行整合。
 
 ---
 
@@ -241,6 +253,7 @@ public function filter_uri(&$str)
     }
 }
 ```
+该方法用来判断uri中是否包含允许字符范围之外的字符，若存在保错退出。
 
 ---
 
