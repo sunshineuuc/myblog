@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="20191231">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-uri.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-uri.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/next/source/lib/three" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next/source/lib/three" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/themes/next/node_modules/" />
@@ -19,12 +17,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-config.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="440">
+                <caret line="295" selection-start-line="295" selection-end-line="295" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="3230">
+                <caret line="170" column="21" selection-start-line="170" selection-start-column="21" selection-end-line="170" selection-end-column="21" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-utf8.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="133">
+                <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-uri.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="698">
-                <caret line="128" column="10" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="10" />
+              <first_editor relative-caret-position="152">
+                <caret line="365" column="5" lean-forward="true" selection-start-line="365" selection-start-column="5" selection-end-line="365" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -42,7 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>code {</find>
       <find>th {</find>
       <find>.post-body {</find>
       <find>justify</find>
@@ -72,6 +105,7 @@
       <find>remove_relative_directory</find>
       <find>_parse_query_string</find>
       <find>filter_uri</find>
+      <find>-&gt;uri_string</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,10 +169,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="458" />
-    <option name="y" value="16" />
-    <option name="width" value="1244" />
-    <option name="height" value="987" />
+    <option name="x" value="258" />
+    <option name="y" value="77" />
+    <option name="width" value="1465" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -343,10 +377,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="472133000" />
+    <option name="totallyTimeSpent" value="475870000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="997" y="66" width="1244" height="987" extended-state="0" />
+    <frame x="148" y="92" width="1172" height="688" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.21074815" />
@@ -363,7 +397,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.5676101" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.13140312" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.21052632" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32963988" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -828,8 +862,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-config.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="1694">
-            <caret line="288" column="7" selection-start-line="288" selection-start-column="7" selection-end-line="288" selection-end-column="7" />
+          <first_editor relative-caret-position="440">
+            <caret line="295" selection-start-line="295" selection-end-line="295" />
           </first_editor>
           <second_editor />
         </state>
@@ -838,8 +872,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-uri.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="698">
-            <caret line="128" column="10" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="10" />
+          <first_editor relative-caret-position="152">
+            <caret line="365" column="5" lean-forward="true" selection-start-line="365" selection-start-column="5" selection-end-line="365" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>

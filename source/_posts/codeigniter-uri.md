@@ -25,7 +25,7 @@ protected $_permitted_uri_chars;
 - `$keyval`表示
 - `$uri_string`用于存放uri。
 - `$segments`用于将uri解析后以数组形式存放。
-- `$rsegments`表示
+- `$rsegments`在URI类中定义，在Router类中赋值，用于存放class和method。
 - `$_permitted_uri_chars`表示URI中接受的字符，在config.php中定义:`$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';`，为空表示允许所有字符！
 
 ---
@@ -72,7 +72,7 @@ public function __construct()
 1. 从配置文件中获取url允许的字符，即`$config['permitted_uri_chars']`，该属性在`filter_uri()`方法中用来过滤uri。
 2. 如果是cli模式下则使用`_parse_argv()`方法解析命令行参数并整合为uri字符串。
 3. 如果uri_protocol是`AUTO`、`REQUEST_URI`使用`_parse_query_string()`方法解析uri，如果是`QUERY_STRING`使用`_parse_query_string()`方法解析uri，`PATH_INFO`以及其他配置则先判断`$_SERVER`的值是否设置，若设置了则用该值作为uri否则跟`AUTO`处理一致。
-4. 调用`_set_uri_string()`方法
+4. 调用`_set_uri_string()`方法将$uri赋值给`$uri_string`变量并解析填充到`segments`数组中去。
 
 ##### 关于uri_protocol #####
 `$config['uri_protocol']`配置不但决定以哪个函数处理URI，同时决定了从哪个全局变量里获取当前上下文的uri地址。uri_protocol可选项有 `AUTO`、`PATH_INFO`、`QUERY_STRING`、`REQUEST_URI`、`ORIG_PATH_INFO`，对应关系是：
@@ -126,7 +126,7 @@ protected function _set_uri_string($str)
 ```
 该方法给功能是将$uri赋值给`$uri_string`变量并解析填充到`segments`数组中去，功能实现:
 1. 若设置了后缀则移除uri后缀。
-2. 解析uri，用'/'分段，填充到$this->segments数组中去。
+2. 解析uri，用'/'分段，经`filter_uri()`检查是否包含无效字符，最后填充到$this->segments数组中去。
 
 ---
 
@@ -264,6 +264,7 @@ public function segment($n, $no_result = NULL)
     return isset($this->segments[$n]) ? $this->segments[$n] : $no_result;
 }
 ```
+该方法的功能是从`segments`数组中取出指定的段，没有则返回null。在Pagination和DB_cache类中有使用。
 
 ---
 
@@ -274,6 +275,7 @@ public function rsegment($n, $no_result = NULL)
     return isset($this->rsegments[$n]) ? $this->rsegments[$n] : $no_result;
 }
 ```
+该方法的功能从`rsements`数组中取出指定的值，若不存在则返回null。
 
 ---
 
@@ -366,6 +368,7 @@ public function assoc_to_uri($array)
 }
 ```
 
+
 ---
 
 #### slash_segment() ####
@@ -375,6 +378,7 @@ public function slash_segment($n, $where = 'trailing')
     return $this->_slash_segment($n, $where, 'segment');
 }
 ```
+该方法从`segment`数组中取出指定的值，并根据`$where`在值前后加`/`。
 
 ---
 
@@ -385,6 +389,7 @@ public function slash_rsegment($n, $where = 'trailing')
     return $this->_slash_segment($n, $where, 'rsegment');
 }
 ```
+该方法从`rsegment`数组中取出指定的值，并根据`$where`在值前后加`/`。
 
 ---
 
@@ -404,6 +409,7 @@ protected function _slash_segment($n, $where = 'trailing', $which = 'segment')
     return $leading.$this->$which($n).$trailing;
 }
 ```
+该方法去根据`$which`来获取指定的值，其中`$which`可能为`segment`或`rsegment`。若`$where`为`trailing`时则在后面加`/`，若为`leading`则在前面加`/`，若为其他值则两边都加`/`。
 
 ---
 
@@ -414,6 +420,7 @@ public function segment_array()
     return $this->segments;
 }
 ```
+该方法返回`segments`数组。
 
 ---
 
@@ -434,6 +441,7 @@ public function total_segments()
     return count($this->segments);
 }
 ```
+该方法返回`segments`数组中段的个数。
 
 ---
 
@@ -454,6 +462,7 @@ public function uri_string()
     return $this->uri_string;
 }
 ```
+该方法返回`uri_string`成员变量的值。
 
 ---
 
