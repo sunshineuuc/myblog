@@ -22,7 +22,7 @@ public $segments = array();
 public $rsegments = array();
 protected $_permitted_uri_chars;
 ```
-- `$keyval`表示
+- `$keyval`用于存放`segments`和`rsegments`转换后的关联数组。
 - `$uri_string`用于存放uri。
 - `$segments`用于将uri解析后以数组形式存放。
 - `$rsegments`在URI类中定义，在Router类中赋值，用于存放class和method。
@@ -286,6 +286,7 @@ public function uri_to_assoc($n = 3, $default = array())
     return $this->_uri_to_assoc($n, $default, 'segment');
 }
 ```
+该方法将成员变量`segments`整合为关联数组并返回该数组。
 
 ---
 
@@ -296,6 +297,7 @@ public function ruri_to_assoc($n = 3, $default = array())
     return $this->_uri_to_assoc($n, $default, 'rsegment');
 }
 ```
+该方法将成员变量`rsegments`整合为关联数组并返回该数组。
 
 ---
 
@@ -351,6 +353,12 @@ protected function _uri_to_assoc($n = 3, $default = array(), $which = 'segment')
     return $retval;
 }
 ```
+该方法的作用是根据指定索引将`segments`或`rsegments`进行分割并将剩余的uri段整合为关联数组，然后返回。参数`$which`可传`segment`或`rsegment`，分别对应成员变量`segments`和`rsegments`。下面以`segment`为例进行功能剖析:
+1. `$n`默认值为3，因为前两个参数一般为`class`和`method`。`$default`数组表示设置默认的键名，这样即使uri中缺少某个键名，也能保证返回的数组中包含该索引。
+2. 如果已经设置过，即成员变量`keyval`中已存在指定索引的键名则直接返回。
+3. 获取`segments`数组及数组个数，当数组个数小于指定索引则将`$default`的键置`null`，这也很容易理解，因为`segments`数组中没用这个键值对。
+4. 根据指定索引截取`segments`数组，对于之后的数组进行键值方式整合: 奇数为键、偶数为值，`$default`若不为空且整合之后不存则该键则将该键对应值置为null。
+5. 以指定索引为键、整合后的数组为值存入成员变量`keyval`中，即`$this->keyval[$which][$n] = $retval;`并返回整合后的数组。
 
 ---
 
@@ -367,7 +375,7 @@ public function assoc_to_uri($array)
     return implode('/', $temp);
 }
 ```
-
+该方法的作用是根据给定的关联数组生成一个对应的URI字符串。
 
 ---
 
@@ -431,6 +439,7 @@ public function rsegment_array()
     return $this->rsegments;
 }
 ```
+该方法返回`rsegments`数组。
 
 ---
 
@@ -452,6 +461,7 @@ public function total_rsegments()
     return count($this->rsegments);
 }
 ```
+该方法返回`rsegments`数组中元素的个数。
 
 ---
 
@@ -473,6 +483,7 @@ public function ruri_string()
     return ltrim(load_class('Router', 'core')->directory, '/').implode('/', $this->rsegments);
 }
 ```
+该方法返回经过路由处理后的uri，如果设置了覆盖目录则加上此目录，没用则返回类似`class/method`的uri。
 
 ---
 
