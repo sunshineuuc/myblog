@@ -1,5 +1,5 @@
 ---
-title: CodeIgniter编码类文件URI.php
+title: CodeIgniter解析类文件URI.php
 date: 2020-01-14 21:51:34
 tags:
 - php
