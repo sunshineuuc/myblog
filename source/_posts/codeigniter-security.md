@@ -94,6 +94,7 @@ public function __construct()
 }
 ```
 
+
 ---
 
 #### csrf_verify() ####
