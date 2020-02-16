@@ -3,7 +3,8 @@ title: CodeIgniter输入类文件Input.php
 date: 2020-02-09 09:57:53
 tags:
 - php
-- categories:
+- codeigniter
+categories:
 - web工作笔记
 ---
 
