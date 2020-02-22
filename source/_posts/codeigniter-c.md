@@ -15,7 +15,7 @@ categories:
 ---
 
 #### 成员变量 ####
-```text
+```php
 // 该类为单例模式的类，类的实例不能直接访问，需要通过统一的访问接口进行访问。
 // 此处`$instance`用于保存该类的实例，即当前对象`$this`。
 private static $instance;
@@ -24,7 +24,7 @@ private static $instance;
 ---
 
 #### __construct() ####
-```text
+```php
 public function __construct()
 {
     // 通过self::$instance实现单例化，静态变量`$instance`表示当前对象。
@@ -48,7 +48,7 @@ public function __construct()
 ---
 
 #### get_instance() ####
-```text
+```php
 public static function &get_instance()
 {
     // $instance为私有变量，外界不能直接访问，所以提供此接口用来获取该类(超级控制器)的实例。

@@ -15,7 +15,7 @@ Common.php文件定义了一系列的全局函数，CI引导文件<b>CodeIgniter
 ---
 
 #### is_php() ####
-```text
+```php
 if ( ! function_exists('is_php'))
 {
 	function is_php($version)
@@ -39,7 +39,7 @@ if ( ! function_exists('is_php'))
 ---
 
 #### is_really_writable() ####
-```text
+```php
 if ( ! function_exists('is_really_writable'))
 {
 	function is_really_writable($file)
@@ -77,7 +77,7 @@ if ( ! function_exists('is_really_writable'))
 ---
 
 #### load_class() ####
-```text
+```php
 if ( ! function_exists('load_class'))
 {
 	function &load_class($class, $directory = 'libraries', $param = NULL)
@@ -136,7 +136,7 @@ if ( ! function_exists('load_class'))
 ---
 
 #### is_loaded() ####
-```text
+```php
 if ( ! function_exists('is_loaded'))
 {
 	function &is_loaded($class = '')
@@ -155,7 +155,7 @@ if ( ! function_exists('is_loaded'))
 ---
 
 #### get_config() ####
-```text
+```php
 if ( ! function_exists('get_config'))
 {
 	function &get_config(Array $replace = array())
@@ -208,7 +208,7 @@ if ( ! function_exists('get_config'))
 ---
 
 #### config_item() ####
-```text
+```php
 if ( ! function_exists('config_item'))
 {
 	function config_item($item)
@@ -229,7 +229,7 @@ if ( ! function_exists('config_item'))
 ---
 
 #### get_mimes() ####
-```text
+```php
 if ( ! function_exists('get_mimes'))
 {
 	function &get_mimes()
@@ -254,7 +254,7 @@ if ( ! function_exists('get_mimes'))
 ---
 
 #### is_https() ####
-```text
+```php
 if ( ! function_exists('is_https'))
 {
 	function is_https()
@@ -283,7 +283,7 @@ if ( ! function_exists('is_https'))
 ---
 
 #### is_cli() ####
-```text
+```php
 if ( ! function_exists('is_cli'))
 {
 	function is_cli()
@@ -297,7 +297,7 @@ if ( ! function_exists('is_cli'))
 ---
 
 #### show_error() ####
-```text
+```php
 if ( ! function_exists('show_error'))
 {
 	function show_error($message, $status_code = 500, $heading = 'An Error Was Encountered')
@@ -326,7 +326,7 @@ if ( ! function_exists('show_error'))
 ---
 
 #### show_404() ####
-```text
+```php
 if ( ! function_exists('show_404'))
 {
 	function show_404($page = '', $log_error = TRUE)
@@ -342,7 +342,7 @@ if ( ! function_exists('show_404'))
 ---
 
 #### log_message() ####
-```text
+```php
 if ( ! function_exists('log_message'))
 {
 	function log_message($level, $message)
@@ -361,7 +361,7 @@ if ( ! function_exists('log_message'))
 ---
 
 #### set_status_header() ####
-```text
+```php
 if ( ! function_exists('set_status_header'))
 {
 	function set_status_header($code = 200, $text = '')
@@ -643,7 +643,7 @@ if ( ! function_exists('set_status_header'))
 ---
 
 #### _error_handler() ####
-```text
+```php
 if ( ! function_exists('_error_handler'))
 {
 	function _error_handler($severity, $message, $filepath, $line)
@@ -680,7 +680,7 @@ if ( ! function_exists('_error_handler'))
 ---
 
 #### _exception_handler() ####
-```text
+```php
 if ( ! function_exists('_exception_handler'))
 {
 	function _exception_handler($exception)
@@ -704,7 +704,7 @@ if ( ! function_exists('_exception_handler'))
 ---
 
 #### _shutdown_handler() ####
-```text
+```php
 if ( ! function_exists('_shutdown_handler'))
 {
 	function _shutdown_handler()
@@ -725,7 +725,7 @@ if ( ! function_exists('_shutdown_handler'))
 ---
 
 #### remove_invisible_characters() ####
-```text
+```php
 if ( ! function_exists('remove_invisible_characters'))
 {
 	function remove_invisible_characters($str, $url_encoded = TRUE)
@@ -754,7 +754,7 @@ if ( ! function_exists('remove_invisible_characters'))
 ---
 
 #### html_escape() ####
-```text
+```php
 if ( ! function_exists('html_escape'))
 {
 	function html_escape($var, $double_encode = TRUE)
@@ -780,7 +780,7 @@ if ( ! function_exists('html_escape'))
 ---
 
 #### _stringify_attributes() ####
-```text
+```php
 if ( ! function_exists('_stringify_attributes'))
 {
 	function _stringify_attributes($attributes, $js = FALSE)
@@ -808,7 +808,7 @@ if ( ! function_exists('_stringify_attributes'))
 ---
 
 #### function_usable() ####
-```text
+```php
 if ( ! function_exists('function_usable'))
 {
 	function function_usable($function_name)

@@ -15,14 +15,14 @@ categories:
 ---
 
 #### __construct() ####
-```text
+```php
 public function __construct() {}
 ```
 
 ---
 
 #### __get() ####
-```text
+```php
 public function __get($key)
 {
     // 这里定义了一个魔术方法，当在model类中去加载别的model或library，则需要使用超级控制器中已实例化的相关对象。
