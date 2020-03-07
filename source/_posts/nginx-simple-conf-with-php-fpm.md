@@ -59,19 +59,49 @@ date.timezone = 'Asia/Shanghai'
 
 #### Nginx配置 ####
 ```yaml
-
-listen       6688;
-server_name  localhost;
-# pass the PHP scripts to FastCGI server listening on 127.0.0.1:8888
-#
-location ~ \.php$ {
-    root           G:\Nginx+php+mysql\html;
-    fastcgi_pass   127.0.0.1:8888;
-    fastcgi_index  index.php;
-    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    include        fastcgi_params;
+server {
+    listen       6688;
+    server_name  localhost;
+    
+    # 定义与FastCGI服务器建立连接的超时时间。应该指出的是，这个超时通常不能超过75秒。
+    fastcgi_connect_timeout 120s;
+    # 定义从FastCGI服务器读取响应的超时时间。超时只在两次连续的读操作之间设置，而不是用于传输整个响应。
+    # 如果FastCGI服务器在此时间内没有传输任何内容，则连接将被关闭。
+    fastcgi_read_timeout 300s;
+    # 设置向FastCGI服务器发送请求的超时时间。超时只在两次连续写入操作之间设置，而不是用于传输整个请求。
+    # 如果FastCGI服务器在此时间内没有收到任何内容，则连接将关闭。
+    fastcgi_send_timeout 300s;
+    
+    # 设置number和size用于读取从FastCGI的服务器的响应，供用于单个连接的缓冲器。
+    # 默认情况下，缓冲区大小等于一个内存页面。这是4K或8K，取决于平台。
+    fastcgi_buffers 256 16k; 
+    fastcgi_buffer_size 128k; 
+    # 当启用FastCGI服务器的响应缓冲时，限制size可能正忙于向客户端发送响应的缓冲区总数，而响应尚未完全读取。
+    # 同时，其余的缓冲区可以用于读取响应，并且如果需要的话，缓冲部分对临时文件的响应。
+    # 默认情况下，size受fastcgi_buffer_size和fastcgi_buffers指令设置的两个缓冲区大小的限制。
+    fastcgi_busy_buffers_size 256k; 
+    # size一旦启用了从FastCGI服务器到临时文件的缓存响应，就一次限制写入临时文件的数据。
+    # 默认情况下，size由fastcgi_buffer_size和fastcgi_buffers指令设置的两个缓冲区限制。
+    # 临时文件的最大大小由fastcgi_max_temp_file_size指令设置。
+    fastcgi_temp_file_write_size 256k;
+    
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:8888
+    #
+    location ~ \.php$ {
+        root           G:\Nginx+php+mysql\html;
+        # 设置FastCGI服务器的地址。该地址可以指定为域名或IP地址，以及端口：localhost:9000;
+        # 或者作为UNIX域套接字路径：unix:/tmp/fastcgi.socket;
+        fastcgi_pass   127.0.0.1:8888;
+        # 在$fastcgi_script_name变量的值中设置一个文件名，该文件名将附加在以斜杠结尾的URI后面。
+        fastcgi_index  index.php;
+        # 设置一个parameter应该传递给FastCGI服务器的应用程序。该value可以包含文本，变量，他们的组合。
+        # 当且仅当没有fastcgi_param在当前级别上定义的指令时，这些指令才从前一级继承。
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
 }
 ```
+`fastcig`相关指令参考[ngx_http_fastcgi_module](https://cloud.tencent.com/developer/section/1259146)
 
 ---
 
