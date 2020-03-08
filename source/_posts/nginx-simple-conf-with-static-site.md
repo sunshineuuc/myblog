@@ -488,3 +488,44 @@ http {
 
 ############################### http块 结束 ############################################
 ```
+
+#### 附：部分Nginx内置变量 ####
+
+| 内置变量名 | 介绍 |
+| :------: | :------: |
+| $arg_PARAMETER | 客户端GET请求中PARAMETER字段的值 |
+| $args | 客户端请求中的参数 |
+| $binary_remote_addr | 远程地址的二进制表示 |
+| $body_bytes_sent | 已发送的消息体字节数 |
+| $content_length | HTTP请求信息里的Content-Length字段 |
+| $content_type | 请求信息里的Content-Type字段 |
+| $cookie_COOKIE | 客户端请求中COOKIE头域的值 |
+| $document_root | 针对当前请求的根路径设置值, 即在server配置中root指令中指定的值 |
+| $document_uri | 与$uri相同 |
+| $host | 请求信息中的Host头域值，如果请求中没有Host行，则等于设置的服务器名 |
+| $http_HEADER | HTTP请求信息里的HEADER字段 |
+| $http_host | 与$host相同，但如果请求信息中没有Host行，则可能不同 |
+| $http_cookie | 客户端的cookie信息 |
+| $http_referer | 引用地址 |
+| $http_user_agent | 客户端代理信息 |
+| $http_via | 最后一个访问服务器的IP地址 |
+| $http_x_forwarded_for | 相当于网络访问路径 |
+| $is_args | 如果$args有值，则等于“?”；否则等于空 |
+| $limit_rate | 对连接速率的限制 |
+| $nginx_version | 当前Nginx服务器的版本 |
+| $pid | 当前Nginx服务器主进程的进程ID |
+| $query_string | 与$args相同 |
+| $remote_addr | 客户端IP地址 |
+| $remote_port | 客户端端口号 |
+| $remote_user | 客户端用户名，用于Auth Basic Module验证 |
+| $request | 客户端请求 |
+| $request_body | 客户端请求的报文体 |
+| $request_body_file | 发往后端服务器的本地临时缓存文件的名称 |
+| $request_filename | 当前请求的文件路径名，由root或alias指令与URI请求生成 |
+| $request_method | 请求的方法，比如GET、POST等 |
+| $request_uri | 请求的URI，带参数，不包含主机名 |
+| $scheme | 所用的协议，如http或者https，比如rewrite^(.+)$$scheme://mysite.name$1redirect |
+| $server_addr | 服务器地址，如果没有用listen指明服务器地址，使用这个变量将发起一次系统调用以取得地址（这样会造成资源浪费）$server_name请求到达的服务器名 |
+| $server_port | 请求到达的服务器端口号 |
+| $server_protocol | 请求的协议版本，HTTP/1.0或HTTP/1.1 |
+| $uri | 请求的不带请求参数的URI，可能和最初的值有不同，比如经过重定向之类的 |

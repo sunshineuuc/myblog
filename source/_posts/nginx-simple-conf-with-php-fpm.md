@@ -96,7 +96,7 @@ server {
         fastcgi_index  index.php;
         # 设置一个parameter应该传递给FastCGI服务器的应用程序。该value可以包含文本，变量，他们的组合。
         # 当且仅当没有fastcgi_param在当前级别上定义的指令时，这些指令才从前一级继承。
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; # 针对当前请求的根路径设置值 . 脚本名称
         include        fastcgi_params;
     }
 }
