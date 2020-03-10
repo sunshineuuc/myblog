@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="20200306155300">
+    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +21,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="1083">
-                <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+              <first_editor relative-caret-position="155">
+                <caret line="306" column="66" lean-forward="true" selection-start-line="306" selection-start-column="66" selection-end-line="306" selection-end-column="66" />
               </first_editor>
               <second_editor />
             </state>
@@ -44,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="209">
+              <first_editor relative-caret-position="2888">
                 <caret line="152" column="3" selection-start-line="152" selection-start-column="3" selection-end-line="152" selection-end-column="3" />
               </first_editor>
               <second_editor />
@@ -97,10 +98,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="283" />
-    <option name="y" value="58" />
+    <option name="x" value="221" />
+    <option name="y" value="241" />
     <option name="width" value="1465" />
-    <option name="height" value="828" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectId" id="1XHtFytLsH3vOOKbOVItgEkc7pP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -220,7 +221,9 @@
       <workItem from="1583504022551" duration="8000" />
       <workItem from="1583584362217" duration="1393000" />
       <workItem from="1583638558438" duration="4885000" />
-      <workItem from="1583647397167" duration="7265000" />
+      <workItem from="1583647397167" duration="7336000" />
+      <workItem from="1583716878698" duration="12941000" />
+      <workItem from="1583800649321" duration="5137000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -383,11 +386,18 @@
       <option name="project" value="LOCAL" />
       <updated>1583585645331</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="20200308175100">
+      <created>1583661074907</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1583661074907</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109452000" />
+    <option name="totallyTimeSpent" value="127601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1478" height="878" extended-state="6" />
@@ -407,7 +417,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.7465374" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.58448756" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21745153" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32963988" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -477,7 +487,8 @@
     <MESSAGE value="per page 30" />
     <MESSAGE value="20200222163700" />
     <MESSAGE value="20200306155300" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200306155300" />
+    <MESSAGE value="20200308175100" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200308175100" />
   </component>
   <component name="WindowStateProjectService">
     <state x="299" y="0" key="CommitChangelistDialog2" timestamp="1581050117755">
@@ -719,16 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="9576">
-            <caret line="504" column="35" selection-start-line="504" selection-start-column="35" selection-end-line="504" selection-end-column="35" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
@@ -750,21 +751,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="209">
-            <caret line="152" column="3" selection-start-line="152" selection-start-column="3" selection-end-line="152" selection-end-column="3" />
+          <first_editor relative-caret-position="155">
+            <caret line="306" column="66" lean-forward="true" selection-start-line="306" selection-start-column="66" selection-end-line="306" selection-end-column="66" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="1083">
-            <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+          <first_editor relative-caret-position="9576">
+            <caret line="504" column="35" selection-start-line="504" selection-start-column="35" selection-end-line="504" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="2888">
+            <caret line="152" column="3" selection-start-line="152" selection-start-column="3" selection-end-line="152" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
