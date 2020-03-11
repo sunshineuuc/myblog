@@ -2,10 +2,10 @@
 title: CodeIgniter输出类Output.php
 date: 2020-02-04 12:01:29
 tags:
-- php
-- codeigniter
+- Php
+- Codeigniter
 categories:
-- web工作笔记
+- Web工作笔记
 ---
 
 #### 引言 ####

@@ -2,11 +2,11 @@
 title: 使用docker创建nginx容器
 date: 2019-11-17 17:11:40
 tags:
-- docker
-- nginx
-- php
+- Docker
+- Nginx
+- Php
 categories:
-- web学习笔记
+- Web学习笔记
 ---
 
 ### nginx容器搭建 ###

@@ -2,10 +2,10 @@
 title: 将NGINX注册为Windows系统服务
 date: 2019-11-16 11:46:32
 tags:
-- windows
-- nginx
+- Windows
+- Nginx
 categories:
-- web学习笔记
+- Web学习笔记
 ---
 
 ### NGINX安装 ###

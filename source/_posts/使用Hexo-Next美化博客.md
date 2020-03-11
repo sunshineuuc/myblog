@@ -5,7 +5,7 @@ tags:
 - Hexo
 - Next
 categories: 
-- web学习笔记
+- Web学习笔记
 ---
 
 ### 指定站点名、作者以及站点描述 ###

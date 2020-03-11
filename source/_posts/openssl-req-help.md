@@ -5,7 +5,7 @@ tags:
 - Command
 - 网络
 categories:
-- web学习笔记
+- Web学习笔记
 ---
 
 ### OpenSSL req 生成自签名证书 ###

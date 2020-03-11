@@ -2,10 +2,10 @@
 title: codeIgniter将字段类型改为null
 date: 2019-11-27 10:11:12
 tags:
-- php
-- codeigniter
+- Php
+- Codeigniter
 categories:
-- web工作笔记
+- Web工作笔记
 ---
 
 #### 问题 ####

@@ -2,10 +2,10 @@
 title: CodeIgniter异常类文件Exceptions.php
 date: 2020-02-22 16:37:52
 tags:
-- php
-- codeigniter
+- Php
+- Codeigniter
 categories:
-- web工作笔记
+- Web工作笔记
 ---
 
 #### 引言 ####

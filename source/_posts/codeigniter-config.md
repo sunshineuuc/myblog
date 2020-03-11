@@ -2,10 +2,10 @@
 title: CodeIgniter配置类文件Config.php
 date: 2019-12-31 18:40:47
 tags:
-- php
-- codeigniter
+- Php
+- Codeigniter
 categories:
-- web工作笔记
+- Web工作笔记
 ---
 
 #### 引言 ####

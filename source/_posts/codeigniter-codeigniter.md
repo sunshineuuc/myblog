@@ -2,10 +2,10 @@
 title: CodeIgniter引导文件CodeIgniter.php
 date: 2019-12-19 20:56:41
 tags:
-- php
-- codeigniter
+- Php
+- Codeigniter
 categories:
-- web工作笔记
+- Web工作笔记
 ---
 
 #### 引言 ####

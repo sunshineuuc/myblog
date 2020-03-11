@@ -2,9 +2,9 @@
 title: Nginx配置入门-nginx.conf文件学习笔记
 date: 2020-02-29 15:27:04
 tags:
-- nginx
+- Nginx
 categories:
-- web学习笔记
+- Web学习笔记
 ---
 
 #### 引言 ####
@@ -493,39 +493,43 @@ http {
 
 | 内置变量名 | 介绍 |
 | :------: | :------: |
-| $arg_PARAMETER | 客户端GET请求中PARAMETER字段的值 |
-| $args | 客户端请求中的参数 |
-| $binary_remote_addr | 远程地址的二进制表示 |
-| $body_bytes_sent | 已发送的消息体字节数 |
-| $content_length | HTTP请求信息里的Content-Length字段 |
-| $content_type | 请求信息里的Content-Type字段 |
-| $cookie_COOKIE | 客户端请求中COOKIE头域的值 |
-| $document_root | 针对当前请求的根路径设置值, 即在server配置中root指令中指定的值 |
-| $document_uri | 与$uri相同 |
-| $host | 请求信息中的Host头域值，如果请求中没有Host行，则等于设置的服务器名 |
-| $http_HEADER | HTTP请求信息里的HEADER字段 |
-| $http_host | 与$host相同，但如果请求信息中没有Host行，则可能不同 |
+| $arg_PARAMETER | 客户端GET请求中PARAMETER字段的值，如`/index.php?site=www.ttlsa.com`，可以用`$arg_site`取得`www.ttlsa.com`这个值 |
+| $args | **HTTP**请求中的完整参数。例如，在请求`/index.php?width=400&height=200`中，`$args`表示字符串`width=400&height=200` |
+| $binary_remote_addr | 二进制格式的客户端地址。例如：`\x0A\xE0B\x0E` |
+| $body_bytes_sent | 表示在向客户端发送的http响应中，**消息体部分**的字节数 |
+| $content_length | 表示客户端请求头部中的`Content-Length`字段 |
+| $content_type | 表示客户端请求头部中的`Content-Type`字段 |
+| $cookie_COOKIE | 表示在客户端请求头部中的`cookie`字段 |
+| $document_root | 表示当前请求所使用的`root`配置项的值, 即在`server`配置中`root`指令中指定的值 |
+| $document_uri | 与`$uri`相同，表示当前请求的URI，不带任何参数 |
+| $host | 表示客户端请求头部中的`Host`字段。如果Host字段不存在，则以实际处理的server（虚拟主机）名称代替。`如果Host字段中带有端口，如IP:PORT，那么$host是去掉端口的，它的值为IP。`$host 是全小写的。这些特性与http_HEADER中的http_host不同，http_host只取出Host头部对应的值。  |
+| $hostname | 表示`Nginx所在机器的名称`，与 `gethostbyname`调用返回的值相同 |
+| $http_HEADER | 表示`当前HTTP请求中相应头部的值`。HEADER名称全小写。例如，请求中 Host头部对应的值用$http_host表示  |
+| $http_host | 与`$host相同`，但如果请求信息中没有Host行，则可能不同 |
 | $http_cookie | 客户端的cookie信息 |
 | $http_referer | 引用地址 |
 | $http_user_agent | 客户端代理信息 |
 | $http_via | 最后一个访问服务器的IP地址 |
 | $http_x_forwarded_for | 相当于网络访问路径 |
-| $is_args | 如果$args有值，则等于“?”；否则等于空 |
-| $limit_rate | 对连接速率的限制 |
+| $is_args | 表示返回客户端的 HTTP响应中相应头部的值。HEADER名称全小写。例如，用`$sent_ http_content_type`表示响应中`Content-Type`头部对应的值  |
+| $limit_rate | 表示当前连接的限速是多少，0表示无限速 |
 | $nginx_version | 当前Nginx服务器的版本 |
 | $pid | 当前Nginx服务器主进程的进程ID |
-| $query_string | 与$args相同 |
-| $remote_addr | 客户端IP地址 |
-| $remote_port | 客户端端口号 |
-| $remote_user | 客户端用户名，用于Auth Basic Module验证 |
+| $query_string | 请求URI中的参数，与`$args`相同，然而`$query_string`是只读的不会改变  |
+| $remote_addr | 表示客户端的地址 |
+| $remote_port | 表示客户端连接使用的端口 |
+| $remote_user | 表示使用`Auth Basic Module`时定义的用户名 |
 | $request | 客户端请求 |
-| $request_body | 客户端请求的报文体 |
+| $request_body | 表示HTTP请求中的消息体，该参数只在`proxy_pass`或`fastcgi_pass`中有意义  |
 | $request_body_file | 发往后端服务器的本地临时缓存文件的名称 |
-| $request_filename | 当前请求的文件路径名，由root或alias指令与URI请求生成 |
+| $request_completion | 当请求已经全部完成时，其值为`ok`。若没有完成，就要返回客户端，则其值为`空字符串`;或者在断点续传等情况下使用 `HTTP range`访问的并不是文件的最后一块，那么其值也是空字符串。 |
+| $request_filename | 表示用户请求中的**URI**经过`root`或`alias`转换后的文件路径 |
 | $request_method | 请求的方法，比如GET、POST等 |
-| $request_uri | 请求的URI，带参数，不包含主机名 |
-| $scheme | 所用的协议，如http或者https，比如rewrite^(.+)$$scheme://mysite.name$1redirect |
+| $request_uri | 请求的URI，带参数，不包含主机名。表示客户端发来的原始请求URI，带完整的参数。`$uri和$document_uri未必是用户的原始请求，在内部重定向后可能是重定向后的URI，而$request_uri 永远不会改变，始终是客户端的原始URI` |
+| $scheme | 所用的协议，如`http`或者`https`，比如`rewrite^(.+)$$scheme://mysite.name$1redirect` |
+| $sent_http_HEADER | 表示返回客户端的HTTP响应中相应头部的值。HEADER名称全小写。例如，用 `$sent_ http_content_type`表示响应中`Content-Type`头部对应的值  |
 | $server_addr | 服务器地址，如果没有用listen指明服务器地址，使用这个变量将发起一次系统调用以取得地址（这样会造成资源浪费）$server_name请求到达的服务器名 |
 | $server_port | 请求到达的服务器端口号 |
-| $server_protocol | 请求的协议版本，HTTP/1.0或HTTP/1.1 |
+| $server_name | 服务器名称 |
+| $server_protocol | 请求的协议版本，`HTTP/1.0`或`HTTP/1.1` |
 | $uri | 请求的不带请求参数的URI，可能和最初的值有不同，比如经过重定向之类的 |

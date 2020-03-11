@@ -2,10 +2,9 @@
 title: Windows Docker Toolbox替换默认docker machine的存储位置
 date: 2019-11-07 21:20:29
 tags:
-- docker
-- windows
+- Docker
 categories:
-- web学习笔记
+- Web学习笔记
 ---
 
 ### 需求说明 ###

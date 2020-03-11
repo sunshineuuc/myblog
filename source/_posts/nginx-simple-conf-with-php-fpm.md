@@ -2,10 +2,10 @@
 title: Nginx配置入门-Win10平台下支持PHP-FPM
 date: 2020-03-06 09:15:26
 tags:
-- nginx
-- php
+- Nginx
+- Php
 categories:
-- web学习笔记
+- Web学习笔记
 ---
 
 #### 引言 ####
