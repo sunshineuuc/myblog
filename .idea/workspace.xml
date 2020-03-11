@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-c.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-c.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-common.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-common.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-config.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-config.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-exceptions.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-exceptions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-hooks.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-hooks.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-input.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-input.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-lang.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-lang.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-loader.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-loader.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-log.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-log.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-m.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-m.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-output.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-output.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-router.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-router.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-security.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-security.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-uri.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-uri.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-utf8.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-utf8.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/dns-setting.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/dns-setting.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/docker-container-run.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/docker-container-run.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/openssl-req-help.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/openssl-req-help.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/windows-nginx-svr.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/windows-nginx-svr.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -53,8 +20,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-7828">
-                <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <first_editor relative-caret-position="9937">
+                <caret line="481" column="14" selection-start-line="481" selection-start-column="14" selection-end-line="481" selection-end-column="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -101,7 +68,6 @@
         <option value="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" />
         <option value="$PROJECT_DIR$/source/_posts/openssl-req-help.md" />
         <option value="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" />
-        <option value="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" />
         <option value="$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md" />
         <option value="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" />
         <option value="$PROJECT_DIR$/source/_posts/docker-container-run.md" />
@@ -126,12 +92,13 @@
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-c.md" />
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md" />
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-utf8.md" />
+        <option value="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="372" />
-    <option name="y" value="373" />
+    <option name="x" value="776" />
+    <option name="y" value="191" />
     <option name="width" value="1465" />
     <option name="height" value="830" />
   </component>
@@ -257,7 +224,7 @@
       <workItem from="1583716878698" duration="12941000" />
       <workItem from="1583800649321" duration="5137000" />
       <workItem from="1583841011816" duration="7786000" />
-      <workItem from="1583886796368" duration="7050000" />
+      <workItem from="1583886796368" duration="12595000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -434,14 +401,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583841057215</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="20200311110200">
+      <created>1583895743766</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1583895743766</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142437000" />
+    <option name="totallyTimeSpent" value="147982000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1478" height="878" extended-state="6" />
+    <frame x="622" y="154" width="1172" height="664" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.27877948" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -457,7 +431,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.7465374" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21745153" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30905512" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32963988" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -529,7 +503,8 @@
     <MESSAGE value="20200306155300" />
     <MESSAGE value="20200308175100" />
     <MESSAGE value="202003101950" />
-    <option name="LAST_COMMIT_MESSAGE" value="202003101950" />
+    <MESSAGE value="20200311110200" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200311110200" />
   </component>
   <component name="WindowStateProjectService">
     <state x="299" y="0" key="CommitChangelistDialog2" timestamp="1581050117755">
@@ -929,8 +904,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-7828">
-            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <first_editor relative-caret-position="9937">
+            <caret line="481" column="14" selection-start-line="481" selection-start-column="14" selection-end-line="481" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>

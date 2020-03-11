@@ -395,26 +395,50 @@ http
 限流的配置会对所有的ip都进行限制，有些时候我们不希望对搜索引擎的蜘蛛或者某些自己的代理机过来的请求进行限制。
 
 ##### geo指令 #####
-对于特定的白名单ip我们可以借助[geo](http://nginx.org/en/docs/http/ngx_http_geo_module.html)指令创建变量，并根据客户端IP地址对变量赋值。
+geo是Nginx的地域模块， 可以通过用户的IP信息查询到地理位置，再根据地理位置提供更好的服务。对于特定的白名单ip我们可以借助[geo](http://nginx.org/en/docs/http/ngx_http_geo_module.html)指令创建变量，并根据客户端IP地址对变量赋值。
 ```yaml
 Syntax:	geo [$address] $variable { ... }
 Default:	—
 Context:	http
 ```
-定义从指定的变量获取客户端的IP地址。默认情况下，Nginx从`$remote_addr`变量取得客户端IP地址。
+定义从指定的变量获取客户端的IP地址。默认情况下，Nginx从`$remote_addr`变量取得客户端IP地址。下面配置会根据不同区域的用户访问不同的服务器进行负载。
 
 ```yaml
-geo $country {
-    default ZZ;
-    include conf/geo.conf;
-    delete 127.0.0.0/16;
-    proxy 192.168.100.0/24;
-    proxy 2001:0db8::/32;
-
-    127.0.0.0/24 US;
-    127.0.0.1/32 RU;
-    10.1.0.0/16 RU;
-    192.168.1.0/24 UK;
+http {
+    upstream US {
+        server 172.22.23.1:80
+    }
+    upstream RU {
+        server 172.22.23.2:80
+    }
+    upstream UK {
+        server 172.22.23.3:80
+    }
+    upstream ZZ {
+        server 172.22.23.4:80
+    }
+    
+    # 根据不同区域的用户访问不同的服务器进行负载
+    geo $country {
+        default ZZ; # $country默认为ZZ
+        include conf/geo.conf;
+        delete 127.0.0.0/16;     # 删除指定网络
+        proxy 192.168.100.0/24;
+        proxy 2001:0db8::/32;
+    
+        127.0.0.0/24 US;  设置$contry为US
+        127.0.0.1/32 RU;  设置$contry为RU
+        192.168.1.0/24 UK;设置$contry为UK
+        
+        10.1.0.0/16 0; # 表示正常访问
+    }
+    
+    location / {
+        proxy_redirect off; # 参数off将在这个字段中禁止所有的proxy_redirect指令
+        proxy_set_header Host $host; # 重新定义或添加字段传递给代理服务器的请求头。
+        proxy_set_header X-Real-IP $remote_addr; # 重新定义或添加字段传递给代理服务器的请求头。
+        proxy_pass http://$country;
+    }
 }
 ```
 Nginx通过CIDR或者地址段来描述地址，同时支持下面的特殊参数：
@@ -424,6 +448,34 @@ Nginx通过CIDR或者地址段来描述地址，同时支持下面的特殊参�
 4. `proxy` 定义可信地址， 如果请求来自可信地址，Nginx将使用其`X-Forwarded-For`头来获得地址。 相对于普通地址，可信地址是顺序检测的。
 5. `proxy_recursive` 开启递归查找地址， 如果关闭递归查找，在客户端地址与某个可信地址匹配时，Nginx将使用`X-Forwarded-For`中的最后一个地址来代替原始客户端地址。如果开启递归查找，在客户端地址与某个可信地址匹配时，Nginx将使用`X-Forwarded-For`中最后一个与所有可信地址都不匹配的地址来代替原始客户端地址。
 6. `ranges` 指示地址将定义为地址段的形式，这个参数必须放在首位。为了加速装载地址库，地址应按升序定义。
+
+##### $http_x_forwarded_for和$remote_addr参数过滤 #####
+
+通过$remote_addr参数和$http_x_forwarded_for参数进行访问的分发限制
+```yaml
+server {
+    listen       80;
+    server_name  testwww.wangshibo.com;
+
+    ##白名单设置，只允许下面三个来源ip的客户端以及本地能访问该站。主要是下面这三行
+    if ($remote_addr !~ ^(172.20.0.1|172.20.0.2|172.20.0.3|127.0.0.1)) {
+     rewrite ^.*$ /index.php last;
+    }
+    
+    #白名单设置，只允许下面三个来源ip的客户端以及本地能访问该站。
+   if ($http_x_forwarded_for !~ ^(172.20.0.4|172.20.0.5|172.20.0.6|127.0.0.1)) {
+       rewrite ^.*$  /index.php last;
+    }
+    
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:16688;
+        fastcgi_read_timeout 30;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+} 
+```
 
 ---
 
