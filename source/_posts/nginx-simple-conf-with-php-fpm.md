@@ -1,16 +1,17 @@
 ---
-title: Nginx配置入门-Win10平台下支持PHP-FPM
+title: Nginx配置入门-WNMP(Win10+Nginx+MySQL+PHP)
 date: 2020-03-06 09:15:26
 tags:
 - Nginx
 - Php
+- Mysql
 categories:
 - Web学习笔记
 ---
 
 #### 引言 ####
 
-[上一篇](https://pureven.cc/2020/02/29/nginx-simple-conf-with-static-site/)学习了Nginx配置文件中的基本指令，然后配置了一个静态网站。通过这个网站可以访问指定目录中的静态资源，但是如果向php脚本这样的文件还是无法访问，这是因为php脚本只能由特定的解析器(php解析器)来解析，本文学习Win10环境下配置Nginx和PHP-FPM的环境然后通过Nginx来访问指定目录中的动态资源(php脚本)。
+[上一篇](https://pureven.cc/2020/02/29/nginx-simple-conf-with-static-site/)学习了Nginx配置文件中的基本指令，然后配置了一个静态网站。通过这个网站可以访问指定目录中的静态资源，但是如果向php脚本这样的文件还是无法访问，这是因为php脚本只能由特定的解析器(php解析器)来解析，本文学习Win10环境下配置Nginx和PHP-FPM的环境然后通过Nginx来访问指定目录中的动态资源(php脚本)，同时安装配置并调试MySQL。
 
 <!-- more -->
 
@@ -225,3 +226,118 @@ G:\Nginx+php+mysql\php-7.4.3-nts-Win32-vc15-x64>php-pureven.exe install
 #### Linux下安装配置Nginx + PHP-fpm ####
 
 请参考[Nginx中文官方文档-nginx php-fpm安装配置](https://wizardforcel.gitbooks.io/nginx-doc/content/Text/6.5_nginx_php_fpm.html)
+
+---
+
+#### MySQL下载配置 ####
+
+##### 下载[MySQL-8.0.19](https://dev.mysql.com/downloads/mysql/)安装包并解压到目录`G:\Nginx+php+mysql` #####
+```markdown
+[G:\Nginx+php+mysql]$ cd mysql-8.0.19-winx64
+[G:\Nginx+php+mysql\mysql-8.0.19-winx64]$ dir
+ 驱动器 G 中的卷是 研发专用
+ 卷的序列号是 5861-182A
+
+ G:\Nginx+php+mysql\mysql-8.0.19-winx64 的目录
+
+2020/03/12  08:40    <DIR>          .
+2020/03/12  08:40    <DIR>          ..
+2020/03/12  08:40    <DIR>          bin
+2020/03/12  08:40    <DIR>          docs
+2020/03/12  08:40    <DIR>          include
+2020/03/12  08:40    <DIR>          lib
+2019/12/10  03:53           405,571 LICENSE
+2019/12/10  03:53               687 README
+2020/03/12  08:40    <DIR>          share
+               2 个文件        406,258 字节
+               7 个目录 30,955,925,504 可用字节
+```
+
+##### 在`G:\Nginx+php+mysql\mysql-8.0.19-winx64`目录下新建文件`my.ini` #####
+```yaml
+[G:\Nginx+php+mysql\mysql-8.0.19-winx64]$ type my.ini
+[mysqld]
+# 设置3306端口
+port=3306
+# 设置mysql的安装目录
+basedir=G:\Nginx+php+mysql\mysql-8.0.19-winx64
+# 设置mysql数据库的数据的存放目录
+datadir=G:\Nginx+php+mysql\mysql-8.0.19-winx64\data
+# 允许最大连接数
+max_connections=200
+# 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统
+max_connect_errors=10
+# 服务端使用的字符集默认为UTF8
+character-set-server=utf8
+# 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+# 默认使用“mysql_native_password”插件认证
+default_authentication_plugin=mysql_native_password
+[mysql]
+# 设置mysql客户端默认字符集
+default-character-set=utf8
+[client]
+# 设置mysql客户端连接服务端时默认使用的端口
+port=3306
+default-character-set=utf8
+```
+
+##### 环境变量设置 #####
+**将MySQL解压后的目录加入环境变量`MYSQL_HOME`**
+![](nginx-simple-conf-with-php-fpm/20200312085658.png)
+
+**将bin目录绝对路径加入系统变量`path`**
+```yaml
+%MYSQL_HOME\bin% ==> path # 此处不是代码，理解万岁
+```
+
+##### 数据库服务初始化 #####
+```yaml
+G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>mysqld.exe --initialize --console
+2020-03-11T13:33:52.368829Z 0 [System] [MY-013169] [Server] G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin\mysqld.exe (mysqld 8.0.19) initializing of server in progress as process 12704
+2020-03-11T13:33:52.370320Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2020-03-11T13:34:00.541307Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: iw.r)rhp)7jX
+```
+注意最后一行中的`iw.r)rhp)7jX`是默认生成的密码。
+
+##### 安装并启动MySQL服务 #####
+```yaml
+G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>mysqld.exe install pureven-MySQL
+Service successfully installed.
+
+G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>net start mysql
+MySQL 服务正在启动 ..
+MySQL 服务已经启动成功。
+```
+**注：可通过`sc delete pureven-MySQL`命令删除`pureven-MySQL`服务。**
+
+##### 登录数据库并修改密码 #####
+```yaml
+G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>mysql.exe -u root -p
+Enter password: ************ # 这里使用的密码是上面初始化后系统生成的密码：iw.r)rhp)7jX
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.19
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> set password for root@localhost='xxxxxx'; # 修改密码为6个x，即xxxxxx
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.01 sec)
+```
