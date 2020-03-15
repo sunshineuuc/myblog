@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +30,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-migration.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-686">
-                <caret line="202" column="8" selection-start-line="202" selection-start-column="8" selection-end-line="202" selection-end-column="8" />
+              <first_editor relative-caret-position="57">
+                <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -112,8 +110,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="237" />
-    <option name="y" value="58" />
+    <option name="x" value="236" />
+    <option name="y" value="57" />
     <option name="width" value="1465" />
     <option name="height" value="830" />
   </component>
@@ -241,7 +239,7 @@
       <workItem from="1583841011816" duration="7786000" />
       <workItem from="1583886796368" duration="12595000" />
       <workItem from="1583932860719" duration="6762000" />
-      <workItem from="1584236112790" duration="18270000" />
+      <workItem from="1584236112790" duration="18529000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -446,14 +444,22 @@
       <option name="project" value="LOCAL" />
       <updated>1584276431087</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="20200315204601">
+      <created>1584276748767</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1584276748767</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173014000" />
+    <option name="totallyTimeSpent" value="173273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1478" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.21914008" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -469,7 +475,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.7465374" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35734072" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.35734072" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32963988" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -520,7 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="201911081129" />
     <MESSAGE value="201911102227" />
     <MESSAGE value="①去掉背景图片，因为跟搜索弹框不兼容&#10;②设置博文摘要" />
     <MESSAGE value="重置分类" />
@@ -545,7 +550,8 @@
     <MESSAGE value="20200311212200" />
     <MESSAGE value="20200312201700" />
     <MESSAGE value="20200315204600" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200315204600" />
+    <MESSAGE value="20200315204601" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200315204601" />
   </component>
   <component name="WindowStateProjectService">
     <state x="299" y="0" key="CommitChangelistDialog2" timestamp="1581050117755">
@@ -962,8 +968,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-migration.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-686">
-            <caret line="202" column="8" selection-start-line="202" selection-start-column="8" selection-end-line="202" selection-end-column="8" />
+          <first_editor relative-caret-position="57">
+            <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>
