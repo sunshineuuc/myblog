@@ -234,7 +234,7 @@ public function version($target_version)
         $migration[0] = new $migration[0];
         call_user_func($migration);
         
-        执行完成后$number即当前版本了，更新到数据库
+        // 执行完成后$number即当前版本了，更新到数据库
         $current_version = $number;
         $this->_update_version($current_version);
     }
