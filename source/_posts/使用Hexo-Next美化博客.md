@@ -448,6 +448,25 @@ code {
 highlight_theme: night
 ```
 
+#### SEO优化 ####
+编辑<code>themes/next/_config.yml</code>文件，找到<code>SEO Settings</code>
+```yaml
+# 整合重复的页面，在你的hexo中设置一个权威标签，可以优化博客的seo
+# 请参阅：https://support.google.com/webmasters/answer/139066
+# 提示：打开此选项之前，请确保在网站配置文件中设置了URL（例如：url:http://yourdomain.com）
+canonical: true
+
+# 更改网站副标题（网站描述）和所有文章/页面标题的结构，以优化SEO
+seo: true
+
+# 如果为true，则会在标签页显示副标题，副标题在网站配置文件中设置
+# subtitle: Subtitle
+index_with_subtitle: true
+
+# 自动添加带有base64加密和解密的外部URL
+exturl: true
+```
+
 ### 参考链接 感谢各位 ###
 [BlueLzy的博客](https://bluelzy.com/articles/use_valine_for_your_blog.html)
 [Eternal_zttz的博客](http://eternalzttz.com/hexo-next.html)
