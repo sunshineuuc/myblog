@@ -467,6 +467,21 @@ index_with_subtitle: true
 exturl: true
 ```
 
+#### 解决某个分类标签显示404 ####
+
+在hexo根目录下创建批处理文件
+```yaml
+@echo off
+:: 删除 .deploy_git public 目录
+rd /s /q .deploy_git public
+del db.json
+del debug.log
+exit
+```
+然后重新`hexo g`
+
+---
+
 ### 参考链接 感谢各位 ###
 [BlueLzy的博客](https://bluelzy.com/articles/use_valine_for_your_blog.html)
 [Eternal_zttz的博客](http://eternalzttz.com/hexo-next.html)
