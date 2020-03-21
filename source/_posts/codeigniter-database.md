@@ -143,7 +143,7 @@ H:.
 ├─fonts
 ├─...
 ```
-限于篇幅，上面仅**手动**加上了`mysqli`目录下的文件，其实每个数据库都有相对应的`driver`, `forge`, `result`, `utility`等文件。
+限于篇幅，上面仅**手动**加上了`mysqli`目录下的文件，其实每个数据库都有相对应的`driver`, `forge`, `result`, `utility`等文件。CodeIgniter根据配置文件中的数据库信息加载对应的文件。
 
 #### 连接数据库 ####
 
@@ -177,3 +177,284 @@ if (isset($autoload['libraries']) && count($autoload['libraries']) > 0)
 
 `手动连接`是指可以手动执行`$this->load->database()`语句来连接数据库，详见[手动连接到数据库](https://codeigniter.org.cn/user_guide/database/connecting.html#id5)。
 
+---
+
+#### 连接过程分析 ####
+
+当执行`$this->load->database()`语句时实际上执行的是`Loader类`中的`database()`方法，在[Loader类]()中有相关分析，这里单独拿出database()方法的代码
+```php
+/**
+* @params - 数据库组名称或配置选项
+* @return - 是否返回加载的数据库对象，false表示将数据库类加载到超级对象，true表示直接返回数据库类实例
+* @query_builder 是否加载查询构造器
+**/
+public function database($params = '', $return = FALSE, $query_builder = NULL)
+{
+    // 获取超级对象
+    $CI =& get_instance();
+
+    // 如果要求返回数据库类实例，但是超级对象中已经加载并建立了到数据库的连接则直接返回false
+    if ($return === FALSE && $query_builder === NULL && isset($CI->db) && is_object($CI->db) && ! empty($CI->db->conn_id))
+    {
+        return FALSE;
+    }
+
+    // 重点： 加载DB.php文件，该文件中只有一个DB方法，加载数据库类和加载构造器都是通过这个方法来加载的
+    require_once(BASEPATH.'database/DB.php');
+
+    // 这里判断如果要求返回数据库类的实例则直接通过DB()方法返回
+    if ($return === TRUE)
+    {
+        return DB($params, $query_builder);
+    }
+
+    // Initialize the db variable. Needed to prevent
+    // reference errors with some configurations
+    $CI->db = '';
+
+    // Load the DB class
+    $CI->db =& DB($params, $query_builder);
+    return $this;
+}
+```
+下面再来看看DB方法，该方法也就是`BASEPATH . 'database/DB.php'`的内容
+```php
+/**
+* @params - 数据库连接值，一般为数据库组名称或配置选项
+* @query_builder_override - 是否加载查询构造器
+**/
+function &DB($params = '', $query_builder_override = NULL)
+{
+	// 如果数据连接值不是DSN字符串则加载配置文件database.php
+    if (is_string($params) && strpos($params, '://') === FALSE)
+    {
+        // database.php文件不存在则报错
+        if ( ! file_exists($file_path = APPPATH.'config/'.ENVIRONMENT.'/database.php')
+            && ! file_exists($file_path = APPPATH.'config/database.php'))
+        {
+            show_error('The configuration file database.php does not exist.');
+        }
+    
+        // 加载database.php文件
+        include($file_path);
+    
+        // CI_Controller类中会调用$this->load->initialize();语句将autoload.php文件设置的默认加载项加载了
+        // 因此如果存在CI_Controller说明已经加载了默认加载项
+        if (class_exists('CI_Controller', FALSE))
+        {
+            // 如果默认加载项包含package，则需要判断package目录下有没有database.php配置文件，有则加载
+            foreach (get_instance()->load->get_package_paths() as $path)
+            {
+                if ($path !== APPPATH)
+                {
+                    if (file_exists($file_path = $path.'config/'.ENVIRONMENT.'/database.php'))
+                    {
+                        include($file_path);
+                    }
+                    elseif (file_exists($file_path = $path.'config/database.php'))
+                    {
+                        include($file_path);
+                    }
+                }
+            }
+        }
+    
+        // database.php文件中定义了$db数组，加载完database.php文件后如果不存在$db数组保存退出
+        if ( ! isset($db) OR count($db) === 0)
+        {
+            show_error('No database connection settings were found in the database config file.');
+        }
+    
+        // $active_group表示要使用哪个数据库组
+        // 如果指定了数据库组就使用指定的，不指定就使用默认的，通常在database.php文件中会通过$active_group = 'default';语句来设置
+        if ($params !== '')
+        {
+            $active_group = $params;
+        }
+    
+        // 如果不存在则说明没有指定要连接的数据库，保存退出
+        if ( ! isset($active_group))
+        {
+            show_error('You have not specified a database connection group via $active_group in your config/database.php file.');
+        }
+        elseif ( ! isset($db[$active_group]))
+        {   // 如果指定了数据库组，但是这个组内没有连接数据库的相关信息也会报错退出
+            show_error('You have specified an invalid database connection group ('.$active_group.') in your config/database.php file.');
+        }
+    
+        // 将连接数据库需要的信息赋值给$params， 这里的信息包括hostname、username、password、database、dbdriver、char_set...
+        $params = $db[$active_group];
+    }
+    elseif (is_string($params))
+    {
+        /**
+         * DSNs必须有以下属性: $dsn = 'driver://username:password@hostname/database';
+         * 例如： $dsn = 'pgsql:host=localhost;port=5432;dbname=database_name';
+         * 使用parse_url方法解析dsn，并将解析后的关联数组赋值给$dsn，对于严重不合格的URL，将返回false
+         * 下面会看到解析失败则报错退出
+         */
+        if (($dsn = @parse_url($params)) === FALSE)
+        {
+            show_error('Invalid DB Connection String');
+        }
+    
+        $params = array(
+            'dbdriver'	=> $dsn['scheme'],
+            // 这里要注意rawurldecode()方法对已编码的URL字符串进行解码
+            'hostname'	=> isset($dsn['host']) ? rawurldecode($dsn['host']) : '',
+            'port'		=> isset($dsn['port']) ? rawurldecode($dsn['port']) : '',
+            'username'	=> isset($dsn['user']) ? rawurldecode($dsn['user']) : '',
+            'password'	=> isset($dsn['pass']) ? rawurldecode($dsn['pass']) : '',
+            'database'	=> isset($dsn['path']) ? rawurldecode(substr($dsn['path'], 1)) : ''
+        );
+    
+        // 解析问号？之后的参数，如get请求后跟的参数
+        if (isset($dsn['query']))
+        {
+            parse_str($dsn['query'], $extra);
+    
+            foreach ($extra as $key => $val)
+            {
+                if (is_string($val) && in_array(strtoupper($val), array('TRUE', 'FALSE', 'NULL')))
+                {
+                    $val = var_export($val, TRUE);
+                }
+    
+                $params[$key] = $val;
+            }
+        }
+    }
+    
+    // 没有指定数据库报错退出
+    if (empty($params['dbdriver']))
+    {
+        show_error('You have not selected a database type to connect to.');
+    }
+    
+    // $query_builder表示是否加载数据库构造类，一般从database.php定义好，不过可以动态的改变，
+    // 比如这里通过$query_builder_override的值来覆盖
+    if ($query_builder_override !== NULL)
+    {
+        $query_builder = $query_builder_override;
+    }
+    // $active_record变量在CodeIgniter2版本中设置，CodeIgniter3中删除了，这里做兼容处理
+    elseif ( ! isset($query_builder) && isset($active_record))
+    {
+        $query_builder = $active_record;
+    }
+    
+    // 重点： 加载DB_driver.php文件，这个文件是一个抽象类CI_DB_driver
+    // 定义了数据库的连接、选择、字符集设置、sql语句执行...一个基本的方法。
+    require_once(BASEPATH.'database/DB_driver.php');
+    
+    if ( ! isset($query_builder) OR $query_builder === TRUE)
+    {
+        // 如果需要加载数据库构造类则加载BASEPATH.'database/DB_query_builer.php'文件
+        // 该文件定义了一个抽象类CI_DB_query_builder，继承自CI_DB_driver
+        // 查询构造类增加了查询有关的条件方法，使用起来灰常方便
+        // 详情参考官网: https://codeigniter.org.cn/user_guide/database/query_builder.html
+        require_once(BASEPATH.'database/DB_query_builder.php');
+        if ( ! class_exists('CI_DB', FALSE))
+        {
+            // 这里很明确了，如果加载查询构造类，则CI_DB继承CI_DB_query_builder
+            class CI_DB extends CI_DB_query_builder { }
+        }
+    }
+    elseif ( ! class_exists('CI_DB', FALSE))
+    {
+        // 如果不加载查询构造类则直接继承CI_DB_driver
+        class CI_DB extends CI_DB_driver { }
+    }
+    
+    // 根据配置信息加载对应的driver文件，比如BASEPATH . 'database/drivers/mysqli/mysqli_driver.php'文件
+    // 该文件继承自CI_DB，具体实现了数据库的连接、选择、字符集设置、事务相关操作等等重要方法，
+    // 因为每种数据库的这些方法不一样需要具体数据库具体设置
+    $driver_file = BASEPATH.'database/drivers/'.$params['dbdriver'].'/'.$params['dbdriver'].'_driver.php';
+    
+    file_exists($driver_file) OR show_error('Invalid DB driver'); // 每种driver文件只能加载一次，重复加载则报错退出
+    require_once($driver_file);
+    
+    // 实例化DB适配器
+    $driver = 'CI_DB_'.$params['dbdriver'].'_driver';
+    $DB = new $driver($params);
+    
+    // 如果存在subdrivers目录则加载subdrivers目录下的driver文件，比如pdo_mysql_driver.php文件
+    if ( ! empty($DB->subdriver))
+    {
+        $driver_file = BASEPATH.'database/drivers/'.$DB->dbdriver.'/subdrivers/'.$DB->dbdriver.'_'.$DB->subdriver.'_driver.php';
+    
+        if (file_exists($driver_file))
+        {
+            require_once($driver_file);
+            $driver = 'CI_DB_'.$DB->dbdriver.'_'.$DB->subdriver.'_driver';
+            $DB = new $driver($params);
+        }
+    }
+    
+    // 重要： 初始化函数完成了数据库的连接和字符集的设置
+    $DB->initialize();
+    return $DB;
+}
+```
+从代码中得知，**首**先通过`require_once(BASEPATH.'database/DB_driver.php');`语句加载了抽象类`CI_DB_driver`，该类中定义了数据库连接、选择、字符集设置、sql语句执行等基本方法，这些方法在数据库适配类中完整实现。**然**后如果加载查询构造器则通过`require_once(BASEPATH.'database/DB_query_builder.php');`语句加载`CI_DB_query_builder`抽象类，该类继承`CI_DB_driver`并定义了查询有关的方法，使用起来非常方便，**然**后根据是否加载查询构造器来定义`CI_DB`，**最**后实例化`CI_DB`。
+
+如果加载了查询构造器就可以使用`$this->db->select()->where()->like()`等方法了，这是因为查询构造器中定义了这类方法。下面再来看看另一个常用数据库类`dbforge`。
+
+---
+
+#### 数据库工厂类 ####
+
+在migrate文件中经常会用的`dbforge`，该类默认在迁移类(`CI_Migration`)中加载，用来对数据表做一些操作，这里的`dbforge`即[数据库工厂类](https://codeigniter.org.cn/user_guide/database/forge.html#id1)，该类主要完成一下功能：
+- 创建和删除数据库
+- 创建和删除数据表，包括添加字段、添加键、创建表、删除表、重命名表等
+- 修改表，包括给表添加列、从表中删除列、修改表中的某个列等
+
+下面来看代码实现：
+```php
+public function dbforge($db = NULL, $return = FALSE)
+{
+    $CI =& get_instance();
+    if ( ! is_object($db) OR ! ($db instanceof CI_DB))
+    {
+        // 先要连接数据库才能后续操作
+        class_exists('CI_DB', FALSE) OR $this->database();
+        $db =& $CI->db;
+    }
+
+    // 加载BASEPATH . 'database/DB_forge.php'文件，即抽象类CI_DB_forge
+    require_once(BASEPATH.'database/DB_forge.php');
+    
+    // 根据选择的数据库从适配器目录下加载对应的forge类，比如CI_DB_mysqli_forge类，该类继承自CI_DB_forge
+    require_once(BASEPATH.'database/drivers/'.$db->dbdriver.'/'.$db->dbdriver.'_forge.php');
+
+    if ( ! empty($db->subdriver))
+    {
+        // 例如pdo方式操作mysql，则要加载BASEPATH . 'database/drivers/pdo/subdrivers/pdo_mysql_forge.php'
+        $driver_path = BASEPATH.'database/drivers/'.$db->dbdriver.'/subdrivers/'.$db->dbdriver.'_'.$db->subdriver.'_forge.php';
+        if (file_exists($driver_path))
+        {
+            require_once($driver_path);
+            $class = 'CI_DB_'.$db->dbdriver.'_'.$db->subdriver.'_forge';
+        }
+    }
+    else
+    {
+        $class = 'CI_DB_'.$db->dbdriver.'_forge';
+    }
+
+    // 如果返回对象则返回CI_DB_mysqli_forge类的实例
+    if ($return === TRUE)
+    {
+        return new $class($db);
+    }
+
+    // 否则将该实例加入超级对象$CI中
+    $CI->dbforge = new $class($db);
+    return $this;
+}
+```
+当执行`$this->load->dbforge();`语句后就可以通过`$this->dbforge->...`来管理数据库了。
+
+#### 数据库工具类 ####
+
+数据库工具类暂时未用到，后续补上。
