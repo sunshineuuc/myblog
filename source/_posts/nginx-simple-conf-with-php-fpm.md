@@ -86,6 +86,7 @@ server {
     # 临时文件的最大大小由fastcgi_max_temp_file_size指令设置。
     fastcgi_temp_file_write_size 256k;
     
+    root "E:/CodeIgniter_hmvc";
     # pass the PHP scripts to FastCGI server listening on 127.0.0.1:8888
     #
     location ~ \.php$ {
@@ -99,6 +100,23 @@ server {
         # 当且仅当没有fastcgi_param在当前级别上定义的指令时，这些指令才从前一级继承。
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; # 针对当前请求的根路径设置值 . 脚本名称
         include        fastcgi_params;
+    }
+    
+    # 这里使用try_files
+    # ① 当请求localhost:6688/api/migrate时先在root下找api文件
+    # ② 找不到就在root/api/下找migrate文件
+    # ③ 找不到就请求root/api/index.php并将migrate作为参数传递给fastcgi
+    location ^~ /api {
+        index index.php;
+
+        try_files $uri $uri/ /api/index.php;
+        
+        location = /api/index.php {
+            fastcgi_pass   127.0.0.1:8888;
+            fastcgi_index  index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include        fastcgi_params;
+        }
     }
 }
 ```
@@ -231,14 +249,14 @@ G:\Nginx+php+mysql\php-7.4.3-nts-Win32-vc15-x64>php-pureven.exe install
 
 #### MySQL下载配置 ####
 
-##### 下载[MySQL-8.0.19](https://dev.mysql.com/downloads/mysql/)安装包并解压到目录`G:\Nginx+php+mysql` #####
+##### 下载[MySQL-5.7.28](https://dev.mysql.com/downloads/mysql/)安装包并解压到目录`G:\Nginx+php+mysql` #####
 ```markdown
-[G:\Nginx+php+mysql]$ cd mysql-8.0.19-winx64
-[G:\Nginx+php+mysql\mysql-8.0.19-winx64]$ dir
+[G:\Nginx+php+mysql]$ cd mysql-5.7.28-winx64
+[G:\Nginx+php+mysql\mysql-5.7.28-winx64]$ dir
  驱动器 G 中的卷是 研发专用
  卷的序列号是 5861-182A
 
- G:\Nginx+php+mysql\mysql-8.0.19-winx64 的目录
+ G:\Nginx+php+mysql\mysql-5.7.28-winx64 的目录
 
 2020/03/12  08:40    <DIR>          .
 2020/03/12  08:40    <DIR>          ..
@@ -253,16 +271,16 @@ G:\Nginx+php+mysql\php-7.4.3-nts-Win32-vc15-x64>php-pureven.exe install
                7 个目录 30,955,925,504 可用字节
 ```
 
-##### 在`G:\Nginx+php+mysql\mysql-8.0.19-winx64`目录下新建文件`my.ini` #####
+##### 在`G:\Nginx+php+mysql\mysql-5.7.28-winx64`目录下新建文件`my.ini` #####
 ```yaml
-[G:\Nginx+php+mysql\mysql-8.0.19-winx64]$ type my.ini
+[G:\Nginx+php+mysql\mysql-5.7.28-winx64]$ type my.ini
 [mysqld]
 # 设置3306端口
 port=3306
 # 设置mysql的安装目录
-basedir=G:\Nginx+php+mysql\mysql-8.0.19-winx64
+basedir=G:\Nginx+php+mysql\mysql-5.7.28-winx64
 # 设置mysql数据库的数据的存放目录
-datadir=G:\Nginx+php+mysql\mysql-8.0.19-winx64\data
+datadir=G:\Nginx+php+mysql\mysql-5.7.28-winx64\data
 # 允许最大连接数
 max_connections=200
 # 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统
@@ -293,8 +311,8 @@ default-character-set=utf8
 
 ##### 数据库服务初始化 #####
 ```yaml
-G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>mysqld.exe --initialize --console
-2020-03-11T13:33:52.368829Z 0 [System] [MY-013169] [Server] G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin\mysqld.exe (mysqld 8.0.19) initializing of server in progress as process 12704
+G:\Nginx+php+mysql\mysql-5.7.28-winx64\bin>mysqld.exe --initialize --console
+2020-03-11T13:33:52.368829Z 0 [System] [MY-013169] [Server] G:\Nginx+php+mysql\mysql-5.7.28-winx64\bin\mysqld.exe (mysqld 5.7.28) initializing of server in progress as process 12704
 2020-03-11T13:33:52.370320Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
 2020-03-11T13:34:00.541307Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: iw.r)rhp)7jX
 ```
@@ -302,22 +320,22 @@ G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>mysqld.exe --initialize --console
 
 ##### 安装并启动MySQL服务 #####
 ```yaml
-G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>mysqld.exe install pureven-MySQL
+G:\Nginx+php+mysql\mysql-5.7.28-winx64\bin>mysqld.exe install pureven-MySQL-5.7.28
 Service successfully installed.
 
-G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>net start mysql
+G:\Nginx+php+mysql\mysql-5.7.28-winx64\bin>net start mysql
 MySQL 服务正在启动 ..
 MySQL 服务已经启动成功。
 ```
-**注：可通过`sc delete pureven-MySQL`命令删除`pureven-MySQL`服务。**
+**注：可通过`sc delete pureven-MySQL-5.7.28`命令删除`pureven-MySQL`服务。**
 
 ##### 登录数据库并修改密码 #####
 ```yaml
-G:\Nginx+php+mysql\mysql-8.0.19-winx64\bin>mysql.exe -u root -p
+G:\Nginx+php+mysql\mysql-5.7.28-winx64\bin>mysql.exe -u root -p
 Enter password: ************ # 这里使用的密码是上面初始化后系统生成的密码：iw.r)rhp)7jX
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 8
-Server version: 8.0.19
+Server version: 5.7.28
 
 Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
 

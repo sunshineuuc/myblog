@@ -434,9 +434,9 @@ http {
             index  index.html index.htm;
         }
 		
-		# 静态文件目录
-		location /ci {
-			root html;
+        # 静态文件目录
+        location /ci {
+            root html;
             index  index.html index.htm;
         }
 
@@ -446,14 +446,14 @@ http {
             index  index.html index.htm;
         }
 		
-		# root 和 alias的区别
-		# root:  最上层目录的定义, 当访问localhost/ci时访问的是html/ci/index.html，即root路径 + location路径。
-		# alias: 目录别名的定义(仅能用于location上下文)，当访问localhost/codeigniter时访问的是E:/personal/CodeIgniter-3.1.10/user_guide/index.html，即使用alias路径替换location路径。
+        # root 和 alias的区别
+        # root:  最上层目录的定义, 当访问localhost/ci时访问的是html/ci/index.html，即root路径 + location路径。
+        # alias: 目录别名的定义(仅能用于location上下文)，当访问localhost/codeigniter时访问的是E:/personal/CodeIgniter-3.1.10/user_guide/index.html，即使用alias路径替换location路径。
 
         # redirect server error pages to the static page /50x.html
         #
 		
-		# 对错误页面 500 502 503 504做了定向配置
+        # 对错误页面 500 502 503 504做了定向配置
         error_page   500 502 503 504  /50x.html;
         location = /50x.html {
             root   html;
