@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,8 +21,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-database.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="506">
-                <caret line="459" column="17" selection-start-line="459" selection-start-column="17" selection-end-line="459" selection-end-column="17" />
+              <first_editor relative-caret-position="-260">
+                <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -31,23 +30,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="119">
-                <caret line="111" column="44" lean-forward="true" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="361">
-                <caret line="442" column="19" selection-start-line="442" selection-start-column="19" selection-end-line="442" selection-end-column="19" />
+              <first_editor relative-caret-position="115">
+                <caret line="536" column="12" selection-start-line="536" selection-start-column="12" selection-end-line="536" selection-end-column="12" />
               </first_editor>
               <second_editor />
             </state>
@@ -125,7 +112,6 @@
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-c.md" />
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md" />
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-utf8.md" />
-        <option value="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" />
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-migration.md" />
         <option value="$PROJECT_DIR$/themes/next/_config.yml" />
         <option value="$PROJECT_DIR$/clean.bat" />
@@ -133,14 +119,15 @@
         <option value="$PROJECT_DIR$/source/_posts/codeigniter-database.md" />
         <option value="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" />
         <option value="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" />
+        <option value="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="327" />
-    <option name="y" value="36" />
+    <option name="x" value="215" />
+    <option name="y" value="42" />
     <option name="width" value="1465" />
-    <option name="height" value="1070" />
+    <option name="height" value="917" />
   </component>
   <component name="ProjectId" id="1XHtFytLsH3vOOKbOVItgEkc7pP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -271,7 +258,7 @@
       <workItem from="1584502412175" duration="22000" />
       <workItem from="1584509772345" duration="10000" />
       <workItem from="1584587277157" duration="7241000" />
-      <workItem from="1584850278719" duration="3286000" />
+      <workItem from="1584850278719" duration="5732000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -497,17 +484,23 @@
       <option name="project" value="LOCAL" />
       <updated>1584776020804</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="20200322143600">
+      <created>1584858987319</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1584858987319</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213519000" />
+    <option name="totallyTimeSpent" value="215965000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="262" y="29" width="1172" height="856" extended-state="0" />
-    <editor active="true" />
+    <frame x="172" y="34" width="1172" height="733" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20665742" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20598592" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -521,7 +514,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.74610245" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.36571428" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.44367418" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32962137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -572,7 +565,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="①去掉背景图片，因为跟搜索弹框不兼容&#10;②设置博文摘要" />
     <MESSAGE value="重置分类" />
     <MESSAGE value="数学公式" />
     <MESSAGE value="201912021805" />
@@ -597,7 +589,8 @@
     <MESSAGE value="20200315204600" />
     <MESSAGE value="20200315204601" />
     <MESSAGE value="20200321153300" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200321153300" />
+    <MESSAGE value="20200322143600" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200322143600" />
   </component>
   <component name="WindowStateProjectService">
     <state x="299" y="0" key="CommitChangelistDialog2" timestamp="1581050117755">
@@ -940,16 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="474">
-            <caret line="481" column="14" selection-start-line="481" selection-start-column="14" selection-end-line="481" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -1050,16 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-database.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="506">
-            <caret line="459" column="17" selection-start-line="459" selection-start-column="17" selection-end-line="459" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -1073,8 +1046,28 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="119">
-            <caret line="111" column="44" lean-forward="true" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+          <first_editor relative-caret-position="-698">
+            <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-database.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-260">
+            <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="115">
+            <caret line="536" column="12" selection-start-line="536" selection-start-column="12" selection-end-line="536" selection-end-column="12" />
           </first_editor>
           <second_editor />
         </state>

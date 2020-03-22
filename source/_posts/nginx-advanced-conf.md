@@ -479,6 +479,81 @@ server {
 
 ---
 
+#### 支持HTTPS ####
+
+##### 基础配置 #####
+```yaml
+http {
+    include       mime.types; 
+    default_type  application/octet-stream;
+
+    server {
+        # 监听时指定ssl
+        listen 16688 ssl;
+        server_name localhost;
+		
+        # 证书文件
+        ssl_certificate "G:/Nginx+php+mysql/etc/ssl/server.crt";
+        # 密钥文件
+        ssl_certificate_key "G:/Nginx+php+mysql/etc/ssl/server.key";
+		
+        # ssl_protocols ssl_ciphers用来限制连接只包含SSL/TLS的加强版本和算法
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_ciphers   HIGH:!aNULL:!MD5;
+		
+        root "E:/personal/CodeIgniter_hmvc";
+		
+        location ^~ /api {
+            index index.php;
+
+            try_files $uri $uri/ /api/index.php;
+			
+            location = /api/index.php {
+                fastcgi_pass   127.0.0.1:8888;
+                fastcgi_index  index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                include        fastcgi_params;
+            }
+        }
+		
+        location / {
+            index  index.html index.htm index.php;
+			
+            location ~ \.php$ {
+                root           E:\personal\CodeIgniter_hmvc;
+                fastcgi_pass   127.0.0.1:8888;
+                fastcgi_index  index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                include        fastcgi_params;
+            }
+        }
+    }
+}
+```
+
+##### 优化 #####
+
+###### 减少CPU运算量 ######
+进程数量最少为CPU核数
+```yaml
+worker_processes  4; 
+```
+
+激活keepalive长连接
+```yaml
+keepalive_timeout 300;
+```
+
+复用SSL会话
+```yaml
+#配置共享会话缓存大小
+ssl_session_cache   shared:SSL:10m;
+#配置会话超时时间
+ssl_session_timeout 10m;
+```
+
+---
+
 #### 未完待续 ####
 
 根据学习进展不定期更新。
