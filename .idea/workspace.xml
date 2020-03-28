@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +17,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-database.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-output.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-260">
-                <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
+              <first_editor relative-caret-position="57">
+                <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -30,11 +29,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-phpmailer.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="115">
-                <caret line="536" column="12" selection-start-line="536" selection-start-column="12" selection-end-line="536" selection-end-column="12" />
+              <first_editor relative-caret-position="133">
+                <caret line="106" column="23" lean-forward="true" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
               </first_editor>
               <second_editor />
             </state>
@@ -120,14 +119,15 @@
         <option value="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" />
         <option value="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" />
         <option value="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-phpmailer.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="215" />
-    <option name="y" value="42" />
+    <option name="x" value="196" />
+    <option name="y" value="46" />
     <option name="width" value="1465" />
-    <option name="height" value="917" />
+    <option name="height" value="919" />
   </component>
   <component name="ProjectId" id="1XHtFytLsH3vOOKbOVItgEkc7pP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -259,6 +259,8 @@
       <workItem from="1584509772345" duration="10000" />
       <workItem from="1584587277157" duration="7241000" />
       <workItem from="1584850278719" duration="5732000" />
+      <workItem from="1585313019814" duration="3983000" />
+      <workItem from="1585361367178" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -495,12 +497,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215965000" />
+    <option name="totallyTimeSpent" value="221149000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="172" y="34" width="1172" height="733" extended-state="0" />
+    <frame x="157" y="37" width="1172" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20598592" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2337032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -514,7 +517,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.74610245" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.44367418" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3523316" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32962137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -768,16 +771,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="95">
             <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-output.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="57">
-            <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>
@@ -1053,21 +1046,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="92">
+            <caret line="543" column="22" lean-forward="true" selection-start-line="543" selection-start-column="22" selection-end-line="543" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-database.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-260">
+          <first_editor relative-caret-position="486">
             <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-output.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="115">
-            <caret line="536" column="12" selection-start-line="536" selection-start-column="12" selection-end-line="536" selection-end-column="12" />
+          <first_editor relative-caret-position="57">
+            <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-phpmailer.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="106" column="23" lean-forward="true" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
