@@ -82,12 +82,17 @@ if ( ! function_exists('load_class'))
 {
 	function &load_class($class, $directory = 'libraries', $param = NULL)
 	{
+	    // 定义静态数组`$_classes`，用于存放类的实例。
 		static $_classes = array();
+		
+		//  判断`$_classes`中是否存在该类的实例，如果存在则返回，该方法避免重复加载类实例，类似于单例模式。
 		if (isset($_classes[$class]))
 		{
 			return $_classes[$class];
 		}
 		$name = FALSE;
+		
+		// 如果APPPATH目录下存在则加载APPPATH目录下的，如果没有再加载BASEPATH目录下的
 		foreach (array(APPPATH, BASEPATH) as $path)
 		{
 			if (file_exists($path.$directory.'/'.$class.'.php'))
@@ -100,6 +105,8 @@ if ( ! function_exists('load_class'))
 				break;
 			}
 		}
+		
+		// 有前缀则加载带前缀的类，比如MY_Loader，MY_Router等，HMVC实现过程中便是加载的MY_Loader MY_Router
 		if (file_exists(APPPATH.$directory.'/'.config_item('subclass_prefix').$class.'.php'))
 		{
 			$name = config_item('subclass_prefix').$class;
@@ -114,6 +121,7 @@ if ( ! function_exists('load_class'))
 			echo 'Unable to locate the specified class: '.$class.'.php';
 			exit(5);
 		}
+		// 调用is_loaded()方法将类名存入静态数组$_is_loaded
 		is_loaded($class);
 		$_classes[$class] = isset($param)
 			? new $name($param)
