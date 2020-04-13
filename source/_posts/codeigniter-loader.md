@@ -2,10 +2,10 @@
 title: CodeIgniter加载类文件Loader.php
 date: 2020-02-17 08:43:36
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

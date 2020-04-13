@@ -2,10 +2,10 @@
 title: CodeIgniter日志类文件Log.php
 date: 2020-02-22 18:27:35
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

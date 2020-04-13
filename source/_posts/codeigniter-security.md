@@ -2,10 +2,10 @@
 title: CodeIgniter安全类文件Security.php
 date: 2020-02-07 11:40:00
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

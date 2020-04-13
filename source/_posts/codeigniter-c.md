@@ -2,10 +2,10 @@
 title: CodeIgniter控制器类文件Controller.php
 date: 2020-02-16 15:45:41
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

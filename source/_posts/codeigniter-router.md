@@ -2,10 +2,10 @@
 title: CodeIgniter路由类文件Router.php
 date: 2020-01-20 14:42:28
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

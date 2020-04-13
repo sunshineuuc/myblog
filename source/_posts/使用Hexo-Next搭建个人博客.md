@@ -5,7 +5,7 @@ tags:
 - Hexo
 - Next
 categories: 
-- Web学习笔记
+- 博客
 ---
 
 # 创建GitHub Pages

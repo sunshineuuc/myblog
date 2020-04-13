@@ -3,10 +3,10 @@ title: Nginx配置入门-WNMP(Win10+Nginx+MySQL+PHP)
 date: 2020-03-06 09:15:26
 tags:
 - Nginx
-- Php
-- Mysql
+- PHP
+- MySQL
 categories:
-- Web学习笔记
+- 开发者手册
 ---
 
 #### 引言 ####

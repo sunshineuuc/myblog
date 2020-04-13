@@ -2,10 +2,10 @@
 title: CodeIgniter解析类文件URI.php
 date: 2020-01-14 21:51:34
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

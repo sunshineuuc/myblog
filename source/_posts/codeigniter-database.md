@@ -2,10 +2,10 @@
 title: CodeIgniter数据库相关功能的实现机制
 date: 2020-03-17 11:02:50
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

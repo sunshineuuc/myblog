@@ -2,7 +2,9 @@
 title: 使用PHPMailer发送邮件
 date: 2020-03-27 20:59:31
 tags:
-- Php
+- PHP
+categories:
+- 开发者手册
 ---
 
 #### 引言 ####

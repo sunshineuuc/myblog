@@ -2,10 +2,10 @@
 title: CodeIgniter语言类文件Lang.php
 date: 2020-02-10 19:45:39
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

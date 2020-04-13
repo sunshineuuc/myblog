@@ -2,10 +2,10 @@
 title: CodeIgniter模型类文件Model.php
 date: 2020-02-16 17:33:03
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

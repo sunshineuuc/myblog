@@ -4,9 +4,9 @@ date: 2019-11-17 17:11:40
 tags:
 - Docker
 - Nginx
-- Php
+- PHP
 categories:
-- Web学习笔记
+- 开发者手册
 ---
 
 ### nginx容器搭建 ###

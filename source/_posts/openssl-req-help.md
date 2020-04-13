@@ -2,10 +2,9 @@
 title: linux openssl req 生成自签名证书
 date: 2019-11-13 20:16:19
 tags: 
-- Command
 - 网络
 categories:
-- Web学习笔记
+- 开发者手册
 ---
 
 ### OpenSSL req 生成自签名证书 ###

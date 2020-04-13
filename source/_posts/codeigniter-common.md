@@ -2,10 +2,10 @@
 title: CodeIgniter全局函数库文件Common.php
 date: 2019-12-23 18:30:37
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

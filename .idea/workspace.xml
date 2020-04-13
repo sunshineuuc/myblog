@@ -3,7 +3,46 @@
   <component name="ChangeListManager">
     <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-c.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-c.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-common.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-common.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-config.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-config.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-database.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-database.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-exceptions.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-exceptions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-hmvc.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-hmvc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-hooks.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-hooks.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-input.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-input.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-lang.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-lang.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-loader.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-loader.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-log.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-log.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-m.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-m.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-migration.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-migration.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-output.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-output.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-phpmailer.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-phpmailer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-router.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-router.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-security.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-security.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-uri.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-uri.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/codeigniter-utf8.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/codeigniter-utf8.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/dns-setting.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/dns-setting.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/docker-container-run.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/docker-container-run.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/linux-sed-awk-grep.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/linux-sed-awk-grep.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/openssl-req-help.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/openssl-req-help.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/phpstormm-about-license.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/phpstormm-about-license.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/windows-nginx-svr.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/windows-nginx-svr.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,38 +56,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-output.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="171">
-                <caret line="9" selection-start-line="9" selection-end-line="9" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-hmvc.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="171">
-                <caret line="9" selection-start-line="9" selection-end-line="9" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-common.md">
+        <entry file="file://$PROJECT_DIR$/source/_posts/phpstormm-about-license.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="361">
-                <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+              <first_editor relative-caret-position="91">
+                <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -91,49 +115,50 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_variables/Pisces.styl" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_common/scaffolding/tables.styl" />
-        <option value="$PROJECT_DIR$/source/_posts/phpstormm-about-license.md" />
+        <option value="$PROJECT_DIR$/themes/next/_config.yml" />
+        <option value="$PROJECT_DIR$/clean.bat" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-common.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-hmvc.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-output.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-c.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-config.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-database.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-exceptions.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-input.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-index.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-hooks.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-lang.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-loader.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-log.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-m.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-migration.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-utf8.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-uri.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-security.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-router.md" />
+        <option value="$PROJECT_DIR$/source/_posts/codeigniter-phpmailer.md" />
+        <option value="$PROJECT_DIR$/source/_posts/dns-setting.md" />
+        <option value="$PROJECT_DIR$/source/_posts/docker-container-run.md" />
+        <option value="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" />
+        <option value="$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md" />
+        <option value="$PROJECT_DIR$/source/_posts/linux-sed-awk-grep.md" />
+        <option value="$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md" />
         <option value="$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md" />
         <option value="$PROJECT_DIR$/source/_posts/windows-nginx-svr.md" />
         <option value="$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md" />
         <option value="$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md" />
         <option value="$PROJECT_DIR$/source/_posts/openssl-req-help.md" />
-        <option value="$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md" />
-        <option value="$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md" />
-        <option value="$PROJECT_DIR$/source/_posts/docker-container-run.md" />
-        <option value="$PROJECT_DIR$/source/_posts/dns-setting.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-uri.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-security.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-router.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-output.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-m.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-log.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-loader.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-lang.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-input.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-index.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-hooks.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-exceptions.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-config.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-c.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-utf8.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-migration.md" />
-        <option value="$PROJECT_DIR$/themes/next/_config.yml" />
-        <option value="$PROJECT_DIR$/clean.bat" />
-        <option value="$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-database.md" />
         <option value="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md" />
         <option value="$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md" />
         <option value="$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-phpmailer.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-hmvc.md" />
-        <option value="$PROJECT_DIR$/source/_posts/codeigniter-common.md" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/source/_posts/phpstormm-about-license.md" />
       </list>
     </option>
   </component>
@@ -150,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,7 +198,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -276,6 +301,9 @@
       <workItem from="1585313019814" duration="3983000" />
       <workItem from="1585361367178" duration="1531000" />
       <workItem from="1585404954001" duration="2276000" />
+      <workItem from="1585830332749" duration="64000" />
+      <workItem from="1585832109325" duration="9000" />
+      <workItem from="1586737655262" duration="3104000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -515,17 +543,24 @@
       <option name="project" value="LOCAL" />
       <updated>1585374365095</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="20200328134500">
+      <created>1585830360347</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1585830360347</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224355000" />
+    <option name="totallyTimeSpent" value="227532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1478" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18377253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29126215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -538,8 +573,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.74610245" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.35180056" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32963988" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35180056" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32962137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -643,294 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="76">
-            <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/windows-nginx-svr.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="152">
-            <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/what-is-binary.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="76">
-            <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="57">
-            <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/phpstormm-about-license.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="19">
-            <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/openssl-req-help.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="76">
-            <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/linux-sed-awk-grep.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/docker-container-run.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="76">
-            <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/dns-setting.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="57">
-            <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-utf8.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="190">
-            <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-uri.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-security.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="114">
-            <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-router.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="95">
-            <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="190">
-            <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-m.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="76">
-            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-log.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="76">
-            <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-loader.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-lang.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-input.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="133">
-            <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="114">
-            <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-exceptions.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="114">
-            <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-config.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-c.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="209">
-            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="285">
-            <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -994,68 +741,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-common.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="280">
-            <caret line="467" column="3" selection-start-line="467" selection-start-column="3" selection-end-line="467" selection-end-column="3" />
+          <first_editor relative-caret-position="171">
+            <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-migration.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-codeigniter.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="190">
-            <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-hooks.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-c.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="247">
-            <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-benchmark.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="361">
-            <caret line="442" column="19" selection-start-line="442" selection-start-column="19" selection-end-line="442" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-698">
-            <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="92">
-            <caret line="543" column="22" lean-forward="true" selection-start-line="543" selection-start-column="22" selection-end-line="543" selection-end-column="22" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>
@@ -1064,8 +784,198 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-database.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="486">
-            <caret line="439" column="8" selection-start-line="439" selection-start-column="8" selection-end-line="439" selection-end-column="8" />
+          <first_editor relative-caret-position="266">
+            <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-config.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-hmvc.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-exceptions.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="304">
+            <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-input.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-hooks.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="114">
+            <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-lang.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-loader.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-loader-learn.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-log.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-m.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-migration.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="152">
+            <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-modify-table-not-null.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-output.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="57">
+            <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-utf8.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-uri.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-security.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-router.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/dns-setting.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="114">
+            <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
@@ -1081,31 +991,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-output.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/docker-container-run.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="171">
-            <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="57">
+            <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-hmvc.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/docker-nginx-phpfpm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="171">
-            <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="95">
+            <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/codeigniter-common.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/docker-toolbox-change-default-docker-machine-dir.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="114">
+            <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/linux-sed-awk-grep.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/使用Hexo-Next美化博客.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="361">
-            <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/使用Hexo-Next搭建个人博客.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/windows-nginx-svr.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/what-happens-aflter-browser-enters-url.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="114">
+            <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/simple-wireshark-tcp-flags.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-38">
+            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/openssl-req-help.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="114">
+            <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-static-site.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="114">
+            <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-simple-conf-with-php-fpm.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/what-is-binary.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="95">
+            <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/nginx-advanced-conf.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="114">
+            <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/phpstormm-about-license.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="91">
+            <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           </first_editor>
           <second_editor />
         </state>

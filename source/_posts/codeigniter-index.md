@@ -2,10 +2,10 @@
 title: CodeIgniter入口文件index.php
 date: 2019-12-16 21:33:50
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

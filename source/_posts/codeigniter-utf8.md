@@ -2,10 +2,10 @@
 title: CodeIgniter编码类文件Utf8.php
 date: 2020-01-13 21:02:32
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

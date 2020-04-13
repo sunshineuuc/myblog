@@ -2,10 +2,10 @@
 title: CodeIgniter迁移类文件Migration.php
 date: 2020-03-15 14:33:32
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

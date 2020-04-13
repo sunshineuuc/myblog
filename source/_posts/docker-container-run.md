@@ -2,10 +2,9 @@
 title: docker container run命令相关解释
 date: 2019-11-13 21:36:21
 tags: 
-- Command
 - Docker
 categories:
-- Web学习笔记
+- 开发者手册
 ---
 
 `docker run`跟`docker container run`命令功能是一样的，都是创建一个新的容器并运行一个命令。

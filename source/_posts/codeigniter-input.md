@@ -2,10 +2,10 @@
 title: CodeIgniter输入类文件Input.php
 date: 2020-02-09 09:57:53
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

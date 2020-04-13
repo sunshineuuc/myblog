@@ -2,10 +2,9 @@
 title: grep sed awk 入门
 date: 2019-11-09 7:36:20
 tags:
-- Command
 - Linux
 categories:
-- 操作系统
+- 开发者手册
 ---
 
 

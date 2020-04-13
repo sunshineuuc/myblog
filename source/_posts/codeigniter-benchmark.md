@@ -2,10 +2,10 @@
 title: CodeIgniter基准测试类文件Benchmark.php
 date: 2019-12-29 16:42:09
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####

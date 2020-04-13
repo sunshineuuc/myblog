@@ -2,10 +2,10 @@
 title: CodeIgniter之Loader类原码学习笔记
 date: 2019-12-09 21:00:44
 tags:
-- Php
+- PHP
 - Codeigniter
 categories:
-- Web工作笔记
+- 开发者手册
 ---
 
 #### 引言 ####
