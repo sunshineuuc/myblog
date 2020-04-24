@@ -14,6 +14,8 @@ categories:
 
 #### 步骤 ####
 
+<font color="#891717"><b>下面步骤作废，可直接参考[该链接](http://idea.medeming.com/jets/)</b></font>
+
 1. 将下列配置加入`hosts`文件。
 ```yaml
 0.0.0.0 https://account.jetbrains.com:443
