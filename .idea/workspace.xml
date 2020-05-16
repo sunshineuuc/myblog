@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="20200416222300">
+    <list default="true" id="13395aa7-7ae6-4e20-92ef-5aacdad96dd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,35 +15,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>10</find>
-      <find>$func_overload</find>
-      <find>$content-desktop-largest</find>
-      <find>content-desktop-largest</find>
-      <find>markdown</find>
-      <find>$table-content-alignment</find>
-      <find>table</find>
-      <find>- php</find>
-      <find>wordcount</find>
-      <find>hexo-symbols-count-time</find>
-      <find>list_c</find>
-      <find>list_t</find>
-      <find>next</find>
-      <find>sidebar.</find>
-      <find>canonical</find>
-      <find>site</find>
-      <find>sidebar</find>
-      <find>wechat_subscriber</find>
-      <find>8.0.19</find>
-      <find>&lt;?php</find>
-      <find>阮一峰</find>
-      <find>themes</find>
-      <find>code</find>
-      <find>github</find>
-      <find>dark</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -148,7 +119,9 @@
       <workItem from="1587438396119" duration="6609000" />
       <workItem from="1587691425406" duration="258000" />
       <workItem from="1588164383991" duration="26000" />
-      <workItem from="1588506385063" duration="4763000" />
+      <workItem from="1588506385063" duration="4860000" />
+      <workItem from="1589626153583" duration="190000" />
+      <workItem from="1589626358311" duration="4781000" />
     </task>
     <task id="LOCAL-00001" summary="201911081129">
       <created>1573183804076</created>
@@ -423,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587210985713</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="20200503225400">
+      <created>1588517673392</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1588517673393</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +436,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="201912051013" />
     <MESSAGE value="201912092059" />
     <MESSAGE value="20191227175600" />
     <MESSAGE value="202001132127" />
@@ -481,17 +460,20 @@
     <MESSAGE value="2020041300" />
     <MESSAGE value="20200416153600" />
     <MESSAGE value="20200416222300" />
-    <option name="LAST_COMMIT_MESSAGE" value="20200416222300" />
+    <MESSAGE value="20200503225400" />
+    <option name="LAST_COMMIT_MESSAGE" value="20200503225400" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="299" y="0" key="CommitChangelistDialog2" timestamp="1581050117755">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="320" y="0" key="CommitChangelistDialog2" timestamp="1588517671628">
+      <screen x="0" y="0" width="1464" height="864" />
     </state>
     <state x="299" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581050117755" />
-    <state x="279" y="101" key="Vcs.Push.Dialog.v2" timestamp="1581050123505">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="320" y="0" key="CommitChangelistDialog2/0.0.1464.864@0.0.1464.864" timestamp="1588517671628" />
+    <state x="299" y="120" key="Vcs.Push.Dialog.v2" timestamp="1588517680090">
+      <screen x="0" y="0" width="1464" height="864" />
     </state>
     <state x="279" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581050123505" />
+    <state x="299" y="120" key="Vcs.Push.Dialog.v2/0.0.1464.864@0.0.1464.864" timestamp="1588517680090" />
     <state x="374" y="120" width="816" height="490" key="find.popup" timestamp="1580862227810">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
